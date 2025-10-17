@@ -1,0 +1,20 @@
+{
+  "anuppuccin-theme-settings@@anp-decoration-toggle": true,
+  "anuppuccin-theme-settings@@anuppuccin-theme-dark": "ctp-macchiato",
+  "anuppuccin-theme-settings@@anuppuccin-theme-accents": "ctp-accent-blue",
+  "anuppuccin-theme-settings@@anp-colorful-frame": false,
+  "anuppuccin-theme-settings@@anp-colorful-frame-icon-toggle-light": false,
+  "anuppuccin-theme-settings@@anp-colorful-frame-icon-toggle-dark": false,
+  "anuppuccin-theme-settings@@anp-layout-select": "anp-card-layout",
+  "anuppuccin-theme-settings@@anp-colorful-frame-opacity": 0,
+  "Appearance-dark@@accent-color-override-dark": false,
+  "Components@@colorful-folder": true,
+  "Components@@folder-font-bold": true,
+  "Components@@setting-item-title-icon-remove": false,
+  "Appearance-dark@@card-layout-open-dark": true,
+  "Appearance-dark@@theme-dark-style-select": "theme-dark-background-darker",
+  "Appearance-dark@@color-to-tab-icon-dark": true,
+  "Appearance-dark@@card-highlight-dark": true,
+  "Editor@@bold-color@@dark": "#6CB2DD",
+  "Plugin@@colorful-checkbox": true
+}

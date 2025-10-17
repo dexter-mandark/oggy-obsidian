@@ -1,0 +1,6 @@
+.mardown-preview-view p,
+.mardown-preview-view li,
+.mardown-preview-view pre,
+.mardown-preview-view .cm-line {
+    white-space: pre-wrap;
+}

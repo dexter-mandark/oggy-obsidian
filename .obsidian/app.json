@@ -1,0 +1,11 @@
+{
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "alwaysUpdateLinks": true,
+  "vimMode": true,
+  "showLineNumber": false,
+  "livePreview": true,
+  "userIgnoreFilters": [
+    "00-Templates/"
+  ]
+}

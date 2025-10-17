@@ -1,0 +1,27 @@
+{
+  "editor:delete-paragraph": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "D"
+    }
+  ],
+  "editor:add-cursor-below": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowDown"
+    }
+  ],
+  "obsidian-diagrams-net:app:diagrams-net-new-diagram": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "D"
+    }
+  ]
+}

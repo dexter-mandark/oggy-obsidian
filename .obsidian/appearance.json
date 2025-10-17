@@ -1,0 +1,17 @@
+{
+  "cssTheme": "Border",
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "editor",
+    "mcl_multi_column",
+    "callouts",
+    "spacing",
+    "pronounced-heading-fonts",
+    "adaptive_images"
+  ],
+  "textFontFamily": "Helvetica",
+  "interfaceFontFamily": "",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font",
+  "baseFontSizeAction": true,
+  "baseFontSize": 22
+}
