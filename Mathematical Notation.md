@@ -12,7 +12,6 @@ cssclasses:
 >
 >$$\mathbb{I}_A(x) = \begin{cases} 1 & \text{if } x \in A \\ 0 & \text{if } x \notin A \end{cases}
 >$$
-
 ^def-indicator-function
 
 >[!cite] Kronecker delta function
@@ -20,5 +19,8 @@ cssclasses:
 >
 >$$\delta(x, y) = \begin{cases} 1 & \text{if } x = y \\ 0 & \text{if } x \neq y \end{cases}
 >$$
-
 ^def-krondelta-function
+
+>[!cite] Heaviside step function
+>The Heaviside step function is  defined as: $$h(z) = \begin{cases} 1 & \text{if } z > 0 \\ 0 & \text{if } z \le 0 \end{cases}$$
+^def-heaviside-step-function

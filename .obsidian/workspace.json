@@ -11,58 +11,32 @@
             "id": "1231a0b904ffe9b3",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "latex_symbols.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "latex_symbols"
-            }
-          },
-          {
-            "id": "bac7ef1de7ad1801",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "Mahalanobis Distance.md",
+                "file": "Kernel Functions and Profile.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mahalanobis Distance"
+              "title": "Kernel Functions and Profile"
             }
           },
           {
-            "id": "41bcf008b35e5e3b",
+            "id": "366a4b3e3c283ad4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Norm.md",
+                "file": "Object Tracking.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Norm"
+              "title": "Object Tracking"
             }
           },
           {
-            "id": "6a8ef0585ba1d517",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Measures of Variability.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Measures of Variability"
-            }
-          },
-          {
-            "id": "a8de394fd7b1bcdf",
+            "id": "03f308c80ff32d78",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -76,91 +50,7 @@
             }
           },
           {
-            "id": "8a6de51881873f66",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Chebeshey Inequality.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Chebeshey Inequality"
-            }
-          },
-          {
-            "id": "17610f10954e09c8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Covariance Matrix.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Covariance Matrix"
-            }
-          },
-          {
-            "id": "7aa10418da1bf7b7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Measures of Variability.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Measures of Variability"
-            }
-          },
-          {
-            "id": "e356fba64b7a104b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Distributions.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Distributions"
-            }
-          },
-          {
-            "id": "3da2c13e8e51425a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Kernel Density Estimation.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Kernel Density Estimation"
-            }
-          },
-          {
-            "id": "5d58ebedccd88a3d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Density Estimation.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Density Estimation"
-            }
-          },
-          {
-            "id": "98417d4fbb61ad9e",
+            "id": "cc735e45d7fb5100",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -174,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 9
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -193,7 +83,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "gradient des",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -340,45 +230,47 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "3da2c13e8e51425a",
+  "active": "a0a11154e8efa5d4",
   "lastOpenFiles": [
-    "Density Estimation.md",
+    "ProgrBasics.md",
+    "Holy C",
+    "Object Tracking.md",
+    "Mean Shift Clustering.md",
     "Kernel Density Estimation.md",
-    "Distributions.md",
-    "Chebeshey Inequality.md",
-    "Borel Sigma Algebra.md",
-    "Basic Definition in Statistics.md",
+    "Kernel Functions and Profile.md",
+    "Pasted image 20251115211943.png",
     "Mathematical Notation.md",
-    "Measures of Variability.md",
-    "00-Images/expierment-sampleSpace-probabilty.png",
-    "00-Images/euclidean distance in 2D .png",
-    "Norm.md",
-    "00-Images/grading methods in a normal distribution.png",
-    "Measures of Central Tendency.md",
-    "Pre-Image.md",
-    "Probability.md",
-    "00-Images/histogram.png",
-    "00-Images/histogram.svg",
-    "latex_symbols.pdf",
-    "Measure Theory.md",
-    "Covariance Matrix.md",
+    "Gradient Ascent.md",
+    "Gradient.md",
     "Todo.md",
-    "00-Images/tangent-secant-line.svg",
-    "Partial Derivatives.md",
+    "latex_symbols.pdf",
+    "Covariance Matrix.md",
+    "Untitled.md",
+    "Likelihood Function.md",
     "Mahalanobis Distance.md",
+    "Measure Theory.md",
+    "Measures of Variability.md",
+    "Linear Regression.md",
+    "Regression.md",
+    "Chebeshey Inequality.md",
+    "Perceptron.md",
+    "Probability.md",
     "Random Variable.md",
-    "Euclidean Distance.md",
-    "00-Templates/MultiColumnTemplate.md",
-    "00-Templates/BaseTemplate.md",
-    "00-Templates/QuotesTemplate.md",
-    "00-Templates/PoemTemplate.md",
-    "00-Images/different-distributions-equal-means.png",
-    "Dump.md",
-    "image_2025-10-05_020923028.png",
-    "expierment-sampleSpace-probabilty 1.png",
-    "Measure Theory^def.md",
-    "measurable space.md",
-    "00-Images/SampleSpace-Experiment-Probability.png",
+    "Classification.md",
+    "Logistic Regression.md",
+    "00-Images/logistic-function-curve.png",
+    "00-Images/logistic-function-curve.png.opdownload",
+    "Norm.md",
+    "Density Estimation.md",
+    "Measures of Central Tendency.md",
+    "Pasted image 20251023001012.png",
+    "00-Images/kernel-density-estimation.png",
+    "00-Images/standard-gaussian-kernel-and-effects-of-bandwith.png",
+    "00-Images/kernel-functions-low-vs-high-bandwith.svg",
+    "00-Images/kde-build2-dark.svg",
+    "00-Images/kernel-functions-to-kde.png",
+    "00-Images/common_kerenl_functions.png",
+    "00-Images/Gaussian_kernel_function.png",
     "00-Images",
     "00-Templates",
     "Untitled.canvas",
@@ -386,8 +278,6 @@
     "00-Pdfs",
     "00-Pdfs/mem-org.pdf",
     "00-Pdfs/deadlock-avoidance-detection-recovery.pdf",
-    "00-Pdfs/ram-org.pdf",
-    "Operating Systems",
-    "00-Diagrams/set-assosiative-cache-mapping.svg.xml"
+    "00-Pdfs/ram-org.pdf"
   ]
 }

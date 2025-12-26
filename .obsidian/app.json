@@ -2,10 +2,11 @@
   "readableLineLength": true,
   "strictLineBreaks": false,
   "alwaysUpdateLinks": true,
-  "vimMode": true,
+  "vimMode": false,
   "showLineNumber": false,
-  "livePreview": true,
+  "livePreview": false,
   "userIgnoreFilters": [
     "00-Templates/"
-  ]
+  ],
+  "propertiesInDocument": "visible"
 }

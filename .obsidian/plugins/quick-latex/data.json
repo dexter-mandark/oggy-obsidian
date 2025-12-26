@@ -1,7 +1,7 @@
 {
   "useMathKeyboardShortcut_toggle": false,
   "moveIntoMath_toggle": true,
-  "autoCloseMath_toggle": true,
+  "autoCloseMath_toggle": false,
   "autoCloseRound_toggle": true,
   "autoCloseSquare_toggle": true,
   "autoCloseCurly_toggle": true,
@@ -15,11 +15,11 @@
   "autoFraction_toggle": true,
   "autoLargeBracket_toggle": true,
   "autoSumLimit_toggle": false,
-  "autoEncloseSup_toggle": true,
-  "autoEncloseSub_toggle": true,
+  "autoEncloseSup_toggle": false,
+  "autoEncloseSub_toggle": false,
   "encloseSelection_toggle": true,
   "autoGreekCommandMathMode_toggle": true,
   "customShorthand_toggle": true,
   "useTabtoComplete_toggle": false,
-  "customShorthand_parameter": "bi:::\\binom{#cursor}{#tab};\nsq:::\\sqrt{};\nbb:::\\mathbb{};\nbf:::\\mathbf{};\ninf:::\\infty;\ncd:::\\cdot;\nqu:::\\quad;\nti:::\\times;\nal:::\\alpha;\nbe:::\\beta;\nga:::\\gamma;\nGa:::\\Gamma;\nde:::\\delta;\nDe:::\\Delta;\nep:::\\epsilon;\nze:::\\zeta;\net:::\\eta;\nth:::\\theta;\nTh:::\\Theta;\nio:::\\iota;\nka:::\\kappa;\nla:::\\lambda;\nLa:::\\Lambda;\nmu:::\\mu;\nnu:::\\nu;\nxi:::\\xi;\nXi:::\\Xi;\npi:::\\pi;\nPi:::\\Pi;\nrh:::\\rho;\nsi:::\\sigma;\nSi:::\\Sigma;\nta:::\\tau;\nup:::\\upsilon;\nUp:::\\Upsilon;\nph:::\\phi;\nPh:::\\Phi;\nch:::\\chi;\nps:::\\psi;\nPs:::\\Psi;\nom:::\\omega;\nOm:::\\Omega;\ntt:::\\text{};\nopn:::\\operatorname{};\nrarr:::\\rightarrow;\nlarr:::\\leftarrow;\nbea:::\\begin{align} #cursor \\end{align};\nfrac:::\\frac{#cursor}{};\nsum:::\\sum_{#cursor i=1}^{n};\nbn:::\\{b_{1},b_{2},…,b_{n}\\};\nan:::\\{a_{1},a_{2},…,a_{n}\\};\nxn:::\\{x_{1},x_{2},…,x_{n}\\};\nAn:::\\{A_{1},A_{2},…,A_{n}\\};\nDn:::\\{D_{1},D_{2},…,D_{n}\\};\nBn:::\\{B_{1},B_{2},…,B_{n}\\};\nXn:::\\{X_{1},X_{2},…,X_{n}\\};"
+  "customShorthand_parameter": "bi:::\\binom{#cursor}{#tab};\nsq:::\\sqrt{};\nbb:::\\mathbb{};\nbf:::\\mathbf{};\ninf:::\\infty;\ncd:::\\cdot;\nqu:::\\quad;\nti:::\\times;\nal:::\\alpha;\nbe:::\\beta;\nga:::\\gamma;\nGa:::\\Gamma;\nde:::\\delta;\nDe:::\\Delta;\nep:::\\epsilon;\nze:::\\zeta;\net:::\\eta;\nth:::\\theta;\nbth:::\\boldsymbol{\\theta};\nTh:::\\Theta;\nbTh:::\\boldsymbol{\\Theta};\nio:::\\iota;\nka:::\\kappa;\nla:::\\lambda;\nLa:::\\Lambda;\nmu:::\\mu;\nnu:::\\nu;\nxi:::\\xi;\nXi:::\\Xi;\npi:::\\pi;\nPi:::\\Pi;\nrh:::\\rho;\nsi:::\\sigma;\nSi:::\\Sigma;\nta:::\\tau;\nup:::\\upsilon;\nUp:::\\Upsilon;\nph:::\\phi;\nPh:::\\Phi;\nch:::\\chi;\nps:::\\psi;\nPs:::\\Psi;\nom:::\\omega;\nOm:::\\Omega;\ntt:::\\text{};\nopn:::\\operatorname{};\nrarr:::\\rightarrow;\nlarr:::\\leftarrow;\nbea:::\\begin{align} #cursor \\end{align};\nfrac:::\\frac{#cursor}{};\nsum:::\\sum_{#cursor i=1}^{n};\nbn:::\\{b_{1},b_{2},…,b_{n}\\};\nan:::\\{a_{1},a_{2},…,a_{n}\\};\nxn:::\\{x_{1},x_{2},…,x_{n}\\};\nAn:::\\{A_{1},A_{2},…,A_{n}\\};\nDn:::\\{D_{1},D_{2},…,D_{n}\\};\nBn:::\\{B_{1},B_{2},…,B_{n}\\};\nXn:::\\{X_{1},X_{2},…,X_{n}\\};"
 }

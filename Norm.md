@@ -110,3 +110,6 @@ Euclidean distance is the length of the straight-line segment connecting two po
 >$$D_{2}(p,q)= \| p−q \|_{2}= \sqrt{\sum_{i=1}^{n}(p_{i} - q_{i})^{2}} = \sqrt{(p_{1} - q_{1})^{2} + (p_{2} - q_{2})^{2} + \cdots + (p_{n} - q_{n})^{2}}$$
 
 ^def-euclidean-distance
+
+>[!danger] No subscript
+>If you don't see a subscript, assume Euclidean distance. $\| p -q \|$ is $D_{2}(p, q)$, the euclidean distance between $p$ and $q$.
