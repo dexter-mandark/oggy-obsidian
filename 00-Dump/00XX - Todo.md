@@ -1,13 +1,16 @@
-- [ ] Z-score connected
-	- [ ] Chebeshey Inequality
-	- [ ] T-score
+- [ ] Basics
+	- [ ] Measure of Central Tendency: add definitions for median, mode
+	- [ ] Complete the Z-score connected parts in Measure of Variability
+		- [ ] Chebeshey Inequality
+		- [ ] T-score
+
+	- [ ] Mahanabis distance
 
 - [ ] Norm Related
-	- [ ] Chebehsy Distance
-	- [ ] L-infty norm
+	- [x] Chebehsy Distance
+	- [x] L-infty norm
 	- [ ] Why these many measures for distance
 
-- [ ] Mahalnobis Distance
 
 - [ ] KDE
 	- [ ] Epanechnikov Functions as 'optimal'

@@ -6,12 +6,12 @@ cssclasses:
 ###### Tags:
 
 ---
- **Measures of dispersion (variability)** quantify the extent to which data in a distribution is spread out, scattered, or stretched.
+**Measures of dispersion (variability)** quantify the extent to which data in a distribution is spread out, scattered, or stretched.
 
 ## Variance and Standard Deviation
 
- Variance quantifies the spread or dispersion of data points in relation to the mean.
- It is the average of the squared differences between each data point and the mean. A high variance indicates that the data points are widely spread out, while a low variance suggests they are clustered closely around the mean.
+Variance quantifies the spread or dispersion of data points in relation to the mean.
+It is the average of the squared differences between each data point and the mean. A high variance indicates that the data points are widely spread out, while a low variance suggests they are clustered closely around the mean.
 
 *Variance is the average sum of squared deviations from the mean. Standard deviation is just positive square root of variance.*
 
@@ -22,13 +22,14 @@ I denote variance as $\sigma^{2}$ or $s^{2}$, and standard deviation denoted by 
 > [!cite] Variance
 > For a **population** of $N$ data points with mean $\mu$, the **population variance**, denoted by $\sigma^{2}$ is defined as $\rightarrow$
 >
-> $$\large \sigma^{2} = \frac{\sum_{i=1}^{N}(x_{i} - \mu)^{2}}{N}$$
+> $$\sigma^{2} = \frac{\sum_{i=1}^{N}(x_{i} - \mu)^{2}}{N}$$
 >
 > For a population **sample** of $n$ data points, with mean $\bar{x}$, the **sample variance**, denoted by $s^{2}$, is defined as $\rightarrow$
 >
-> $$\large s^{2} = \frac{\sum_{i=1}^{n}(x_{i} - \bar{x})^{2}}{n-1}$$
+> $$s^{2} = \frac{\sum_{i=1}^{n}(x_{i} - \bar{x})^{2}}{n-1}$$
+^def-variance
 
->[!note] Why is there a distinction between standard deviation and variance ?
+>[!tip] Why is there a distinction between standard deviation and variance ?
 >By taking the square root of the variance, the standard deviation reverses the initial squaring process, returning the measure of spread to the *original units* of the data.
 >That's the only distinction between variance and standard deviation. Both convey the same exact information.
 
@@ -38,7 +39,7 @@ I denote variance as $\sigma^{2}$ or $s^{2}$, and standard deviation denoted by 
 
 I use the sample statistics to estimate the population parameters. And dividing by $n$ would always underestimate the population variance.
 
->[!abstract]
+>[!abstract] Minimizing variance
 >Let $f(v)$ be a function that gives the average of the squared differences from an arbitrary value $v$:
 >
 >$$f(v) = \frac{1}{n}\sum_{i=1}^{n}(x_{i} − v)^{2}$$
@@ -54,7 +55,7 @@ I use the sample statistics to estimate the population parameters. And dividing 
 >This result is the definition of the sample mean, $\bar{x}$.
 >So, the function $f(v)$ has the minimum value at $v=\bar{x}$.
 
-$\sum(x_{i}− \bar{x})^2 \leq \sum(x_{i} - \mu)^2$, this means, if I were to calculate the sample variance by dividing by $n$, the value of the variance would be the minimum possible value, and thus it will systematically underestimate the true population variance. Dividing by the smaller number, $n−1$, corrects for this bias and provides a better estimate of the population variance.
+For the population, the $f(v)$ would be minimum at $v=\mu$. Thus, $\sum(x_{i}− \bar{x})^2 \leq \sum(x_{i} - \mu)^2$, if I were to calculate the sample variance by dividing by $n$, the value of the variance would be the minimum possible value, and thus it will systematically underestimate the true population variance. Dividing by the smaller number, $n−1$, corrects for this bias and provides a better estimate of the population variance.
 
 This is called **Bessel's Correction**. Dividing by $n-1$, inflates the variance just enough to correct the underestimation of the population variance.
 
@@ -63,8 +64,8 @@ This is called **Bessel's Correction**. Dividing by $n-1$, inflates the variance
 In statistics, **degrees of freedom** refer to the number of values in a final calculation that are truly "free to vary" without violating any constraints imposed by the calculation itself.
 When I use a sample to estimate a population parameter, I introduce constraints on my data that reduce the number of independent pieces of information.
 
-Once I know the sample mean and the values of $n−1$ of my data points, the final data point is no longer free. It is fixed by the constraint.
-Since only $n−1$ of the data points can vary independently, there are only $n−1$ independent pieces of information contributing to our estimate of the spread. *Dividing by $n−1$ correctly averages the squared deviations over the number of independent pieces* of information that were used to calculate them, providing an unbiased estimate of the population variance.
+Once I know the sample mean and the values of $n−1$ of my data points, the final data point is no longer free to vary.
+Since only $n−1$ of the data points can vary independently, there are only $n−1$ independent pieces of information contributing to my estimate of the spread. *Dividing by $n−1$ correctly averages the squared deviations over the number of independent pieces* of information that were used to calculate them, providing an unbiased estimate of the population variance.
 
 ##### Why square the difference ?
 
@@ -81,18 +82,18 @@ But I can get rid of negative values by using absolute values as well, why squar
 Co-variance describes the **joint variability** of two random variables. It tells me how two variables tend to move in relation to each other.
 Variance tells me how a single variable varies from its mean. Co-variance tells me how two variables vary from their respective means, in relation to each other.
 
-Co-variance of two variables $X, Y$ is denoted as $\text{cov}(X, Y)$ or sometimes as $\sigma_{XY}$.
+Co-variance of two variables $X, Y$ is denoted as $\operatorname{cov}(X, Y)$ or sometimes as $\sigma_{XY}$.
 
 >[!cite] Probabilistic definition of Co-variance
 >Covariance for two [[Random Variable#^def-random-variable|random variables]] $X, Y$ is defined as the expected value of the product of their deviations from their individual expected values.
 >
-> $$\text{cov} (X,Y)= E{\Big [(X - E[X])(Y- E[Y])\Big]} $$
+> $$\operatorname{cov} (X,Y)= E{\Big [(X - E[X])(Y- E[Y])\Big]} $$
 >
 > This can be further simplified as:
 >
-> $${\begin{aligned}\operatorname {cov} (X,Y)&=\operatorname {E} \left[\left(X-\operatorname {E} \left[X\right]\right)\left(Y-\operatorname {E} \left[Y\right]\right)\right]\\&=\operatorname {E} \left[XY-X\operatorname {E} \left[Y\right]-\operatorname {E} \left[X\right]Y+\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]\right]\\&=\operatorname {E} \left[XY\right]-\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]-\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]+\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]\\ \\ \text{cov}(X, Y) &=\operatorname {E} \left[XY\right]-\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]\end{aligned}}$$
+> $${\begin{aligned}\operatorname {cov} (X,Y)&=\operatorname {E} \Big[\left(X-\operatorname {E} \left[X\right]\right)\left(Y-\operatorname {E} \left[Y\right]\right)\Big]\\&=\operatorname {E} \Big[XY-X\operatorname {E} \left[Y\right]-\operatorname {E} \left[X\right]Y+\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]\Big]\\&=\operatorname {E} \left[XY\right]-\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]-\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]+\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]\\ \\ \operatorname{cov}(X, Y) &=\operatorname {E} \left[XY\right]-\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]\end{aligned}}$$
 >
-> This identity states that the covariance of two variables is the expected value of their product minus the product of their expected values.
+> This identity states that the *covariance of two variables is the expected value of their product minus the product of their expected values.*
 ^def-probabilistic-covariance
 
 >[!cite] Co-variance
@@ -104,7 +105,6 @@ Co-variance of two variables $X, Y$ is denoted as $\text{cov}(X, Y)$ or sometime
 >For a population, co-variance $\sigma_{XY}$ is defined as $\rightarrow$
 >
 >$$\sigma_{XY}= \frac{\sum_{i=1}^{N}(x_{i} - \mu_{x})(y_{i} - \mu_{y})}{N} $$
-
 ^def-covariance
 
 >[!tip] Covariance of $X$ with $X$
@@ -137,8 +137,7 @@ Basically, covariance is "normalized" into a unit-less measure called the *corr
 >[!cite] Co-relation
 >The correlation coefficient between $X, Y$ is calculated by taking the covariance and normalizing it by dividing by the product of the standard deviations of the two variables.
 >
->$$\large{\rho_{XY}} = \frac{\text{cov}(X, Y)}{\sigma_{X}\sigma_{Y}}$$
-
+>$${\rho_{XY}} = \frac{\operatorname{cov}(X, Y)}{\sigma_{X}\sigma_{Y}}$$
 ^def-corelation
 
 ###### Interpreting Co-relation
@@ -152,43 +151,3 @@ Basically, covariance is "normalized" into a unit-less measure called the *corr
 >[!danger]
 >Both covariance and the standard Pearson correlation coefficient are exclusively concerned with measuring the strength and direction of a _linear_ relationship.
 >They are fundamentally *blind to any other kind of relationship*, no matter how strong or predictable it might be. This is one of the most significant limitations of these measures.
-
-## Z score
-
->[!cite] Z-Score
->A **z-score**, also known as a **standard score**, is expressed in terms of standard deviations from the mean, indicating how many standard deviations a data point $x$ is above or below the $mean$.
->
-> $$z=\frac{x-\mu}{\sigma}$$
-
-^def-zscore
-
-The sign and magnitude of the z-score provide a clear interpretation of a data point's position within its distribution:​
-- **Positive z-score:** The raw score is above the mean. A z-score of $+2$ means the data point is $2$ standard deviations above the mean.
-- **Negative z-score:** The raw score is below the mean. A z-score of $-1.5$ means the data point is $1.5$ standard deviations below the mean.
-- **Zero z-score:** The raw score is exactly equal to the mean.
-
-![[grading methods in a normal distribution.png|#invert_B]]
-
-##### Why use Z-score ?
-
-Z-score is a **standardization** because it converts data to a common scale with **mean 0 and standard deviation 1.​**
-
-###### Comparing Different Datasets
-
-Z-score acts as a standardizing metric. By standardizing, I can compare values from distributions with different means and standard deviations.​
-
-> [!example]
-> A student scores $70$ on an English test ($\mu=60, \sigma=15$) and $80$ on a Math test ($\mu=85, \sigma=5$). Which score is better relative to the class?
-> -  English z-score: $(70 - 60) / 15 = +0.67$
-> - Math z-score: $(80 - 85) / 5 = -1.0$
->     
-> The positive z-score in English shows the student performed above average, while the negative z-score in Math shows they performed below average, despite the higher raw score.
->
-
-###### Identifying Outliers
-
-Z-scores help identify data points that are significantly different from the rest of the dataset. Data points with z-scores greater than $+3$ or less than $-3$ are often considered outliers because they are very far from the mean.​ [[Chebeshey Inequality]]
-
-###### Calculating Probabilities
-
-In a normal distribution, z-scores can be used with a z-table to find the probability of a score occurring. For example, a z-score of 0 corresponds to the 50th percentile.

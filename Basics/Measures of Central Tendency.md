@@ -23,21 +23,20 @@ The mean of a dataset is the unique value for which the sum of the deviations of
 
 For a dataset with $n$ scalar values $\{x_{1},x_{2},…,x_{n}\}$, where a non-negative weight $w_{i}$ is associated with each data-point $x_{i}$, representing its relative importance.
 
-The mean ($\mu$ or $\bar{x}$) is just the average weighted value. $$\large \mu = \frac{\sum_{i=1}^{n}w_{i} x_{i}}{\sum_{i=1}^{n} w_{i}}$$
-
-If each data point has an equal weighted, the mean is called **arithmetic mean**. $$\large \mu = \frac{1}{n}\sum_{i=1}^{n} x_{i}$$
+The mean ($\mu$ or $\bar{x}$) is just the average weighted value. $$ \mu = \frac{\sum_{i=1}^{n}w_{i} x_{i}}{\sum_{i=1}^{n} w_{i}}$$
+If each data point has an equal weighted, the mean is called **arithmetic mean**. $$\mu = \frac{1}{n}\sum_{i=1}^{n} x_{i}$$
 
 >[!tip] Weighted Mean
 >
->For weighted mean, the weighted sum of deviations from the mean is zero.$$\large \sum_{i=1}^{n}w_{i}(x_{i}−\mu)=0$$
+>For weighted mean, the weighted sum of deviations from the mean is zero.$$ \sum_{i=1}^{n}w_{i}(x_{i}−\mu)=0$$
 
 #### Mean for multi-variate data
 
-For a dataset with $n$ data points, where each data point is a $d$-dimensional vector $\vec{x_{i}} = [x_{1}^{i}, x_{2}^{i}, \cdots, x_{d}^{i}]$, the mean is a vector $\vec{\mu} = [\mu_{1}, \mu_{2}, \cdots, \mu_{d}]$, defined as, $$\large \vec{\mu} = \frac{1}{n}\sum_{i=1}^{n} \vec{x_{i}}$$
+For a dataset with $n$ data points, where each data point is a $d$-dimensional vector $\mathbf{x}_{i} = [x_{1}^{i}, x_{2}^{i}, \cdots, x_{d}^{i}]$, the mean is a vector $\boldsymbol{\mu} = [\mu_{1}, \mu_{2}, \cdots, \mu_{d}]$, defined as, $$\boldsymbol{\mu} = \frac{1}{n}\sum_{i=1}^{n} \mathbf{x}_{i}$$
 
-Where each component $μ_{j}$ of the mean vector is the arithmetic mean of the $j$-th component of all data vectors. $\mu_j = \frac{1}{n}\sum_{i=1}^{n} x_{i, j}$
+Where each component $μ_{j}$ of the mean vector is the arithmetic mean of the $j$-th component of all data vectors. $\mu_j = \frac{1}{n}\sum_{i=1}^{n} x^i_j$
 
- If each vector $x_{i}$ has a corresponding scalar weight $w_i$ then, $$\large \vec{\mu} = \frac{\sum_{i=1}^{n} w_{i} \ \vec{x_{i}}}{\sum_{i=1}^{n} w_{i}}$$
+ If each vector $\mathbf{x}_{i}$ has a corresponding scalar weight $w_i$ then, $$\boldsymbol{\mu} = \frac{\sum_{i=1}^{n} w_{i} \ \mathbf{x}_{i}}{\sum_{i=1}^{n} w_{i}}$$
 
 ### Generalizing the Definition
 
@@ -49,7 +48,6 @@ The mean is fundamentally defined as the **expected value**.
 >- For discrete distributions: $$E[X]= \sum_{i=1}^{n} x_{i}⋅P(X=x_{i})$$
 >
 > - For continuous distributions: $$E[X]= \int_{-\infty}^{\infty}{x⋅f(x)dx}$$
-
 ^def-mean-generic
 
 ### Problems with Mean

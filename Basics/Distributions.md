@@ -24,7 +24,7 @@ Given a set of $n$ *independent and identically distributed* observations $\{
 
 $$P_{n}(A)=\frac{1}{n}\sum_{i=1}^{n} \mathbb{I}_{A}(x_{i})$$
 
-Here, $\mathbb{I}_{A}(x_{i})$ is the [[Mathematical Notation#^def-indicator-function|indicator function]]. And the function $P_{n}(A)$, gives the proportion of observations that fall into the set $A$. The collection of these proportions for all measurable sets constitutes the empirical frequency distribution.
+Here, $\mathbb{I}_{A}(x_{i})$ is the [[Definitions#^def-indicator-function|indicator function]]. And the function $P_{n}(A)$, gives the proportion of observations that fall into the set $A$. The collection of these proportions for all measurable sets constitutes the empirical frequency distribution.
 
 >[!tip] Glivenko-Cantelli theorem
 >The Glivenko-Cantelli theorem states that as the number of observation, $n \rightarrow \infty$ the empirical distribution function converges uniformly to the true cumulative distribution function (CDF) of the random variable.
@@ -51,7 +51,7 @@ It visualizes a frequency distribution of a dataset $S$.
 
 5. Finally the complete thing can be expressed as:  $$H[j] = \sum_{i=1}^{n} \delta \left( \left\lfloor \frac{x_i - x_{\min}}{b_{w}} \right\rfloor - j \right)$$
 
-6. Where $\delta$ is the [[Mathematical Notation#^def-krondelta-function|Kronecker Delta Function]].
+6. Where $\delta$ is the [[Definitions#^def-krondelta-function|Kronecker Delta Function]].
 
 >[!warning] Zero Indexed
 >Here the array $H[j]$ is zero indexed, if it were 1-indexed, I would just add one to the $b_{j}$ value.

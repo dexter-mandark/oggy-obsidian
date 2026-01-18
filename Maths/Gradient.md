@@ -19,5 +19,4 @@ cssclasses:
 >Because the gradient is a **linear operator**, it has a property called the "sum rule": the gradient of a sum equals the sum of the gradients.
 >
 >$$\nabla_{X}\left(\sum_{i=1}^{n}f_{i}(X)\right) = \sum_{i=1}^{n}\nabla_{X}f_{i}(X)$$
-
 ^def-sum-rule-gradient

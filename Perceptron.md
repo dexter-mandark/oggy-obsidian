@@ -23,7 +23,7 @@ Its the simplest form of an artificial neural network and the fundamental buildi
 > 
 > - **Bias**: $b$ is the bias, a term that allows the decision boundary to be shifted away from the origin.
 > - **Net Input**: $z$ is the net input or weighted sum, given as: $$z = (\mathbf{w} \cdot \mathbf{x}) + b = \left(\sum_{i=1}^{m} w_i x_i\right) + b$$
-> - **Activation Function**: The net input $z$ is passed through an activation function $h(z)$ which is typically a non-linear step function. For the classic perceptron, this is the [[Mathematical Notation#^def-heaviside-step-function|Heaviside Step Function]].
+> - **Activation Function**: The net input $z$ is passed through an activation function $h(z)$ which is typically a non-linear step function. For the classic perceptron, this is the [[Definitions#^def-heaviside-step-function|Heaviside Step Function]].
 > 
 >The goal of the perceptron is to find a weight vector $\mathbf{w}$ and a bias $b$ such that the function $f(\mathbf{x})$ produces the correct output for as many examples in the training set as possible.
 
@@ -43,7 +43,7 @@ The **bias** term determines the **position of the boundary** relative to the 
 
 #### Perceptron Learning Algorithm
 
-For the training set be $\mathcal{D} = \{(\mathbf{x}_1, y_1), (\mathbf{x}_2, y_2), \ldots, (\mathbf{x}_N, y_N)\}$ where $\mathbf{x}_j$ is a $d$-dimensional input vector and $y_j \in \{0, 1\}$ is the corresponding true label. The goal of the algorithm is to find a suitable weight vector $\mathbf{w}$ that correctly classifies a set of labeled training examples.
+For the training set be $\mathcal{D} = \{(\mathbf{x}_1, y_1), (\mathbf{x}_2, y_2), \ldots, (\mathbf{x}_N, y_N)\}$ where $\mathbf{x}_j$ is a $d$-dimensional input vector and $y_j \in \{0, 1\}$ is the corresponding true label. The goal of the algorithm is to find a suitable weight vector $\mathbf{w}$ that correctly classifies a set of labelled training examples.
 
 ###### Initialization
 
@@ -72,7 +72,7 @@ The process is repeated for a fixed number of iterations (**epochs**) or until a
 The update rule $\boldsymbol{\theta}^{(t+1)} = \boldsymbol{\theta}^{(t)} + \eta (y_j - \hat{y}_j) \cdot \mathbf{x}_j$, geometrically adjusts ()"pushes") the decision boundary $(\boldsymbol{\theta} \cdot \mathbf{x} = 0)$
 The **weight vector $\boldsymbol{\theta}$ is always perpendicular to the decision boundary** and points towards the region that is classified as "1".
 
-For the two cases of mis-classification:
+For the two cases of misclassification:
 - **False Negative ($y = 1, \hat{y} = 0$)**: The point $\mathbf{x}_j$ is on the wrong side of the decision boundary, the angle between the vector $\boldsymbol{\theta}^{(t)}$ and the vector $\mathbf{x}_j$ is greater than 90 degrees (their dot product is negative), which is why it was classified as $0$. In this case the update rule is $\boldsymbol{\theta}^{(t+1)} = \boldsymbol{\theta}^{(t)} + \eta \ \mathbf{x}_j$, I add a fraction of the input vector to the weight vector. I'm basically *nudging the weight vector $\boldsymbol{\theta}$ to be more aligned with $\mathbf{x}_j$.* This operation pulls the tip of the $\boldsymbol{\theta}^{(t)}$ vector in the direction of $\mathbf{x}_j$.
 - **False Positive ($y = 0, \hat{y} = 1$)**: In this case the update rule is $\boldsymbol{\theta}^{(t+1)} = \boldsymbol{\theta}^{(t)} - \eta \ \mathbf{x}_j$, I subtract a fraction of the input vector from the weight vector. I'm basically *nudging the weight vector $\boldsymbol{\theta}$ to be more away with $\mathbf{x}_j$.* This operation pushes the tip of the $\boldsymbol{\theta}^{(t)}$ vector away from the direction of $\mathbf{x}_j$, increasing the angle between them and making their dot product more likely to be negative in the future.
 

@@ -3,7 +3,7 @@ cssclasses:
   - callouts-outlined
 ---
 
-###### Tags:
+###### Tags: [[Measures of Variability]]
 
 ---
 
@@ -36,17 +36,51 @@ Raw distance treats all dimensions equally, which leads to misleading conclusion
 
 If I were to compute the Euclidean distance between a data point and the mean, the calculation would be dominated by whichever dimension has the larger numerical scale, regardless of its actual variability. This means that dimensions with larger units (like height in cm versus weight in kg) would disproportionately influence the distance measure.​
 
-#### What to do ?
+##### What to do ?
 
 I need a measure that takes into account the **context** of each distribution, specifically the spread and variability of the distribution.
 *Can't compare apple with oranges, so first I gotta level the playing field*.
 
-###### Partial Solution: Z-Scores for Uni-variate Data
+## Z score
 
-To address the problem of comparing data points across distributions or dimensions with different scales, I use [[Measures of Variability#^def-zscore|Z score]].
+>[!cite] Z-Score
+>A **z-score**, also known as a **standard score**, is expressed in terms of standard deviations from the mean, indicating how many standard deviations a data point $x$ is above or below the mean.
+>
+> $$z=\frac{x-\mu}{\sigma}$$
+^def-zscore
+
+Z-score is a **standardization** because it converts data to a common scale with **mean 0 and standard deviation 1.​**
+
+The sign and magnitude of the z-score provide a clear interpretation of a data point's position within its distribution:​
+- **Positive z-score:** The raw score is above the mean. A z-score of $+2$ means the data point is $2$ standard deviations above the mean.
+- **Negative z-score:** The raw score is below the mean. A z-score of $-1.5$ means the data point is $1.5$ standard deviations below the mean.
+- **Zero z-score:** The raw score is exactly equal to the mean.
+
+![[grading methods in a normal distribution.png|#invert_B]]
+
+#### What Works
+
+###### Comparing Different Datasets
+
 Z-scores *levels the playing field* by expressing deviations in terms of standard deviations, which are standardized units of measurement. It takes care of the "scale" problem. Lets say the data point $x$ in distribution $D_{1}$ has the z-score $z_{x} = 0.6$ and data point $y$ in $D_{2}$ has the z-score $z_{y} = 3.0$, you can absolutely make a lot of conclusions about $x$ and $y$, even if I don't tell you anything about the distributions themselves.
 
-###### The Limitation of Z-Scores: Ignoring Correlations
+> [!example]
+> A student scores $70$ on an English test ($\mu=60, \sigma=15$) and $80$ on a Math test ($\mu=85, \sigma=5$). Which score is better relative to the class?
+> -  English z-score: $(70 - 60) / 15 = +0.67$
+> - Math z-score: $(80 - 85) / 5 = -1.0$
+>     
+> The positive z-score in English shows the student performed above average, while the negative z-score in Math shows they performed below average, despite the higher raw score.
+>
+
+###### Identifying Outliers
+
+Z-scores help identify data points that are significantly different from the rest of the dataset. Data points with z-scores greater than $+3$ or less than $-3$ are often considered outliers because they are very far from the mean.​
+
+###### Calculating Probabilities
+
+In a normal distribution, z-scores can be used with a z-table to find the probability of a score occurring. For example, a z-score of 0 corresponds to the 50th percentile.
+
+#### The Limitation of Z-Scores: Ignoring Correlations
 
 Z-scores work well for uni-variate data or when features are **uncorrelated**. However, in multivariate data, when correlations exist, z-scores alone are insufficient because they treat each dimension independently.​
 

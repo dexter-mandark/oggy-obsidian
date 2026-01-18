@@ -24,3 +24,8 @@ cssclasses:
 >[!cite] Heaviside step function
 >The Heaviside step function is  defined as: $$h(z) = \begin{cases} 1 & \text{if } z > 0 \\ 0 & \text{if } z \le 0 \end{cases}$$
 ^def-heaviside-step-function
+
+>[!cite] Homogeneous Function
+>In general, a function $f$ is a $k$-degree homogeneous function, if scaling the input by $\alpha$ scales the output by $\alpha^k$:
+>$$f(\alpha . x) = \alpha^k f(x)$$
+^def-homogeneous-function

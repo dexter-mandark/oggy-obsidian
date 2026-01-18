@@ -1,6 +1,0 @@
----
-cssclasses:
-  - callouts-outlined
----
-###### Tags: 
----
