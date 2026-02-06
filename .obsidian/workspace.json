@@ -4,21 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "f302c01b6e92e002",
+        "id": "def39e007393e762",
         "type": "tabs",
         "children": [
           {
-            "id": "fd889704db2be20c",
+            "id": "f62cdc1efedf2ced",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-Dump/00XX - Todo.md",
-                "mode": "source",
+                "file": "Linear Algebra.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00XX - Todo"
+              "title": "Linear Algebra"
+            }
+          },
+          {
+            "id": "f015595db8594eb3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Markov's Inequality.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Markov's Inequality"
             }
           }
         ]
@@ -40,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "max",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -227,37 +241,40 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "a0a11154e8efa5d4",
+  "active": "f62cdc1efedf2ced",
   "lastOpenFiles": [
-    "00-Dump/00XX - Partial Derivatives.md",
-    "00-Dump/00XX - Basic Definition in Statistics.md",
+    "Maths/Probability.md",
+    "Basics/Kernel Density Estimation.md",
+    "Basics/Covariance Matrix.md",
     "Linear Regression.md",
-    "Object Tracking.md",
-    "Mean Shift Clustering.md",
-    "Logistic Regression.md",
-    "Perceptron.md",
-    "00-Dump/00XX - Dump.md",
-    "00-Dump",
+    "Maths/Norm.md",
+    "Markov's Inequality.md",
+    "Linear Algebra.md",
     "Gradient Ascent.md",
     "Classification.md",
-    "Basics/Density Estimation.md",
-    "Chebeshey Inequality.md",
-    "Basics/Kernel Density Estimation.md",
-    "Basics/Kernel Functions and Profile.md",
-    "00-Dump/00XX - Likelihood Function.md",
-    "Basics/Distributions.md",
+    "Perceptron.md",
+    "Pasted image 20260119185823.png",
+    "Pasted image 20260119185838.png",
+    "Pasted image 20260205203124.png",
+    "Maths/Random Variable.md",
+    "00-Dump/00XX - Todo.md",
     "00-Dump/00XX - latex_symbols.pdf",
     "Maths/Measure Theory.md",
-    "Maths/Gradient.md",
     "Maths/Borel Sigma Algebra.md",
-    "Maths/Probability.md",
     "Maths/Pre-Image.md",
-    "Pasted image 20260108161826.png",
-    "00-Dump/00XX - Todo.md",
-    "Todo.md",
-    "Basics/Z score & Mahalanobis Distance.md",
-    "Basics/Z score.md",
+    "Maths/Definitions.md",
+    "Logistic Regression.md",
     "Basics/Measures of Variability.md",
+    "Basics/Kernel Functions and Profile.md",
+    "Basics/Density Estimation.md",
+    "Basics/Z score & Mahalanobis Distance.md",
+    "Basics/Measures of Central Tendency.md",
+    "00-Dump/00XX - Partial Derivatives.md",
+    "00-Dump/00XX - Basic Definition in Statistics.md",
+    "Object Tracking.md",
+    "Mean Shift Clustering.md",
+    "00-Dump",
+    "Pasted image 20260108161826.png",
     "Maths",
     "Basics",
     "Pasted image 20251023001012.png",
@@ -268,9 +285,6 @@
     "00-Images/kernel-density-estimation.png",
     "00-Images/standard-gaussian-kernel-and-effects-of-bandwith.png",
     "00-Images/kernel-functions-low-vs-high-bandwith.svg",
-    "00-Images/kde-build2-dark.svg",
-    "00-Images/kernel-functions-to-kde.png",
-    "00-Images/common_kerenl_functions.png",
     "00-Images",
     "00-Templates",
     "Untitled.canvas",

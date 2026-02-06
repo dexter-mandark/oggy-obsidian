@@ -11,7 +11,7 @@ In simple terms, the pre-image is about "working backwards."
 - An **image** is what I get when you apply a function: you start with an input and find its output. (Going forward).
 - A **pre-image** is what you started with: you look at an output (or a set of outputs) and find all the inputs that could have produced it. (Going backward).
 
-The pre-image is a set of all the "origins" or "sources" in the starting space (the domain) that map into a specific region of the target space (the codomain).
+The pre-image is a set of all the "origins" or "sources" in the starting space (the domain) that map into a specific region of the target space (the co-domain).
 
 >[!cite] Pre-Image
 >For a function $f:A \rightarrow B$, the pre-image of a set $Y \subseteq B$ is denoted as $f^{-1}(Y)$ and is defined as:

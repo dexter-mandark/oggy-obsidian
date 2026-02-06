@@ -3,7 +3,7 @@ cssclasses:
   - callouts-outlined
 ---
 
-###### Tags: [[Measures of Central Tendency]]
+###### Tags: [[Measures of Variability]]
 
 ---
 

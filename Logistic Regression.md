@@ -12,7 +12,7 @@ cssclasses:
 Logistic regression is a supervised learning algorithm for [[Classification#^def-classification-problem|classification problems]]. It models the conditional probability distribution of class membership given input features using a parametric probabilistic model.
 Despite its name, it is actually used for **classification problems** rather than regression.
 
-###### Variables
+###### The Setup
 
 Given a dataset $\mathcal{D} = \{(\mathbf{x}^{(i)}, y^{(i)})\}_{i=1}^{n}$ where $\mathbf{x}^{(i)} \in \mathbb{R}^d$ and $y^{(i)} \in \{C_1, C_2, ..., C_K\}$.
 Where,

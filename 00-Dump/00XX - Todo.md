@@ -25,6 +25,10 @@
 		- [ ] Hassian Matrix
 - [ ] Finish it off (end game)
 
+- [ ] Linear Regression
+	- [ ] Residual Standard Error, F-statistics
+	- [ ] Page 78 onwards in ISLP book
+
 
 - [ ] Perceptron
 	- [ ] Perceptron learning algorithm (like logistic regression, correct points have no weight-age, fix that)

@@ -172,9 +172,9 @@ The cost function I use is $J(\boldsymbol{\theta}) = \Big{\|} Y - \mathbf{X}\bol
 
 To minimize this cost, what I'm basically doing is $\rightarrow$ find a $\hat{\boldsymbol{\theta}}$ $\rightarrow$ to make the predictions $\hat{Y}$ (or $\mathbf{X}\hat{\boldsymbol{\theta}}$)  as close as possible to the observed data $Y$ (the minimum L2 distance).
 
-Each column of ($\mathbf{X}$) is a $(d+1)$-dimensional vector. The **span** (set of all linear combinations) of these columns forms a subspace of $\mathbb{R}^{d+1}$, which is nothing but $\text{Col}(\mathbf{X})$, the **column space** of $\mathbf{X}$. *Any prediction $\hat{Y} = \mathbf{X}\hat{\boldsymbol{\theta}}$ must lie in $\text{Col}(\mathbf{X})$*, because it's literally a linear combination of the columns of $\mathbf{X}$.
+Each column of $\mathbf{X}$ is a $(d+1)$-dimensional vector. The **span** (set of all linear combinations) of these columns forms a subspace of $\mathbb{R}^{\min(d+1, n)}$, which is nothing but $\text{Col}(\mathbf{X})$, the **column space** of $\mathbf{X}$. *Any prediction $\hat{Y} = \mathbf{X}\hat{\boldsymbol{\theta}}$ must lie in $\text{Col}(\mathbf{X})$*, because it's literally a linear combination of the columns of $\mathbf{X}$.
 
-The actual values $Y$ (the true observed values) typically does not lie in $\text{Col}(\mathbf{X})$. This is because real data has noise, measurement error, and effects from variables not in my model. The true $Y$ exists somewhere in the full $n$-dimensional space $\mathbb{R}^{n}$, and not necessarily on the lower-dimensional subspace $\mathbb{R}^{d+1}$ defined by my features.
+The actual values $Y$ (the true observed values) typically does not lie in $\text{Col}(\mathbf{X})$. This is because real data has noise, measurement error, and effects from variables not in my model. The true $Y$ exists somewhere in the full $n$-dimensional space $\mathbb{R}^{n}$, and not necessarily on the lower-dimensional subspace $\mathbb{R}^{\min(d+1, n)}$ defined by my features.
 
 I have to find a $\hat{Y}$ in $\text{Col}(\mathbf{X})$ that is closest to $Y$ -- the **orthogonal projection of $Y$ onto $\text{Col}(\mathbf{X})$.** 
 
@@ -194,8 +194,8 @@ That’s exactly the **normal equation** I derived when $J(\boldsymbol{\theta})$
 
 >[!tip] Linear Regression - Projection POV
 >- The matrix $X$ defines a subspace of possible prediction vectors.
->- The actual data $Y$ might not lie in that subspace.
->- Linear regression finds the projection of $Y$ onto that subspace — i.e. the closest point to $Y$ that can be expressed as $X\theta$
+>- The actual data $Y$ lies in a higher dimensional space $\mathbb{R}^n$.
+>- Linear regression finds the projection of $Y$ onto the subspace $\text{Col}(\mathbf{X})$ — i.e. the closest point to $Y$ that can be expressed as $\mathbf{X}\boldsymbol{\theta}$
 >
 >Thus:
 >- $\hat{Y} \in \text{Col}(X)$
@@ -203,4 +203,29 @@ That’s exactly the **normal equation** I derived when $J(\boldsymbol{\theta})$
 >
 >*The fitted line/plane/hyperplane in regression is the projection surface that minimizes the perpendicular distance from $Y$.*
 
+
+
+## R2 Score
+
+For a regression problem, the worst-case baseline model would be  $f^*(\mathbf{x}) = \bar{y}$, meaning that regardless of the input features $\mathbf{x}$, the model always predicts the mean of the target variable. To evaluate how good a regression model is, I compare it against this baseline model. The R2 score quantifies this comparison.
+
+
+>[!cite] Total Sum of Squares
+>The **total sum of squares** (TSS), also called the **total sum of squared deviations**, measures the total variability in the dataset. It represents the sum of each observation's squared deviation from the mean.
+> 
+>$$\text{TTS} =  \sum_{i=0}^{n}(y_{i} - \bar{y})^2 $$
+>$\text{TSS}$ captures all the variation present in the dependent variable before any model is fit. The sample [[Measures of Variability#^def-variance|variance]] can be expressed in terms of $\text{TSS}$: $$\sigma^2 = \frac{\text{TTS}}{n-1}$$
+^def-tts
+
+
+For a model $f^*(\mathbf{x}) = \hat{y}$ the cost function in Ordinary Least Squares regression is the **residual sum of squares** (RSS), also called the **sum of squared errors** (SSE).
+$$\text{RSS} = \sum_{i=1}^{n}(y_i− \hat{y}_i)^2$$
+
+$\text{RSS}$ measures the unexplained variation, the portion of variability that the model fails to capture. The quality of a model can be quantified as the ratio of $\text{RSS}$ to $\text{TTS}$ : the lower the $\text{RSS}$, the lower the ratio, the better the model explains the data. ​Then, I can just subtract this ratio from $1$, so that the better the model, the higher the value.
+
+>[!cite] R2 Score
+>The R2 score (coefficient of determination) is defined as:
+>$$\begin{align} R^2 &= 1− \frac{\text{RSS}}{\text{TTS}} \\  \\ R^2 &= 1− \frac{\sum_{i=1}^{n}(y_i− \hat{y}_i)^2}{\sum_{i=1}^{n}(y_i - \bar{y})^2} \end{align}$$
+>An R2 score of $1$ indicates perfect predictions, while an R2 of $0$ means the model performs no better than simply predicting the mean. And if I really cock it up, R2 score can be negative, indicating performance worse than even the baseline.
+^def-r2-score
 
