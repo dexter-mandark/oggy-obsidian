@@ -3,6 +3,8 @@
 	- [ ] Complete the Z-score connected parts in Measure of Variability
 		- [ ] Chebeshey Inequality
 		- [ ] T-score
+	- [ ] Covariance Matrix determinant
+	
 
 	- [ ] Mahanabis distance
 

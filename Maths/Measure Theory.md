@@ -152,18 +152,19 @@ Introducing a $\sigma$-algebra, gives me a *measurable space* $(X, \sigma)$
 - **No actual measurement**: I know which sets are eligible, but not their "sizes".
 
 ###### Measure Space $(X, \sigma, \mu)$
+
 Introducing a measure $\mu$ creates a **measure space** $(X, \sigma, \mu)$. This completes the framework because now I have:
 - **Which sets I can measure**: $\sigma$-algebra
 - **How to measure them**: $\mu$ assigns actual numerical "sizes" to each measurable set.
 
 ## Measurable Functions
 
-Assuming I have two measurable spaces:
-- A starting space: $(X, \mathcal{F})$
-- A target space: $(Y, \mathcal{G})$
-Here, $\mathcal{F}$ and $\mathcal{G}$ are the respective $\sigma$-algebras on the sets $X$ and $Y$.
-
 >[!cite] Measurable Function
+>Assuming I have two measurable spaces:
+>- A starting space: $(X, \mathcal{F})$
+>- A target space: $(Y, \mathcal{G})$
+>Here, $\mathcal{F}$ and $\mathcal{G}$ are the respective $\sigma$-algebras on the sets $X$ and $Y$.
+>
 >A function $f: X \rightarrow Y$ is said to be **measurable** if for every measurable set $E$ in the target space's $\sigma$-algebra $\mathcal{G}$, its *pre-image is a measurable set* in the starting space's $\sigma$-algebra $\mathcal{F}$.
 >
 >That is, for every $E \in \mathcal{G}$, the [[Pre-Image#^def-pre-image|pre-image]] $f^{-1}(E) \in \mathcal{F}$.

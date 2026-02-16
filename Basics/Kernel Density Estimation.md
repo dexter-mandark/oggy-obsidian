@@ -3,13 +3,13 @@ cssclasses:
   - callouts-outlined
 ---
 
-###### Tags: [[Density Estimation]]
+###### Tags: [[Estimation Theory]]
 
 ---
 
 ## Kernel Density Estimation
 
-Kernel Density Estimation is a [[Density Estimation#Non-Parametric Density Estimation|non-parametric]] statistical technique used to estimate the probability density function (PDF).
+Kernel Density Estimation is a [[Estimation Theory#Non-Parametric Density Estimation|non-parametric]] statistical technique used to estimate the probability density function (PDF).
 The fundamental idea behind KDE is that the more data points there are in a specific region, the higher the probability of a new observation occurring there. The process works by:​
 1. Placing a [[Kernel Functions and Profile#^def-kernel-function|kernel]] (a smooth bump) over every single data point in the dataset.​
 2. Summing up all of these individual kernels to create a single, smooth curve.

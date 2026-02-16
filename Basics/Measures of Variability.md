@@ -55,7 +55,7 @@ I use the sample statistics to estimate the population parameters. And dividing 
 >This result is the definition of the sample mean, $\bar{x}$.
 >So, the function $f(v)$ has the minimum value at $v=\bar{x}$.
 
-For the population, the $f(v)$ would be minimum at $v=\mu$. Thus, $\sum(x_{i}− \bar{x})^2 \leq \sum(x_{i} - \mu)^2$, if I were to calculate the sample variance by dividing by $n$, the value of the variance would be the minimum possible value, and thus it will systematically underestimate the true population variance. Dividing by the smaller number, $n−1$, corrects for this bias and provides a better estimate of the population variance.
+For the population, $f(v)$ would be minimum at $v=\mu$. Thus, $\sum(x_{i}− \bar{x})^2 \leq \sum(x_{i} - \mu)^2$, if I were to calculate the sample variance by dividing by $n$, the value of the variance would be the minimum possible value, and thus it will systematically underestimate the true population variance. Dividing by the smaller number, $n−1$, corrects for this bias and provides a better estimate of the population variance.
 
 This is called **Bessel's Correction**. Dividing by $n-1$, inflates the variance just enough to correct the underestimation of the population variance.
 
