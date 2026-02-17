@@ -8,91 +8,45 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f015595db8594eb3",
+            "id": "f62cdc1efedf2ced",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Markov's Inequality.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "juggl_view",
+              "state": {},
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "Markov's Inequality"
+              "title": "Juggl"
             }
           },
           {
-            "id": "cdab329fd7e7c930",
+            "id": "6fbd448846b8d3d0",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Guha ML Roadmap.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "juggl_view",
+              "state": {},
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "Guha ML Roadmap"
+              "title": "Juggl"
             }
           },
           {
-            "id": "60b28edf7ad084c9",
+            "id": "36743541ed33497b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Basics/Z score & Mahalanobis Distance.md",
+                "file": "Estimation Theory.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Z score & Mahalanobis Distance"
-            }
-          },
-          {
-            "id": "1b224523340a898d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00-Dump/00XX - Todo.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "00XX - Todo"
-            }
-          },
-          {
-            "id": "2e5a30b500e51a38",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Basics/Measures of Variability.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Measures of Variability"
-            }
-          },
-          {
-            "id": "6e421d9109e44406",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00-Dump/00XX - Todo.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "00XX - Todo"
+              "title": "Estimation Theory"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -111,7 +65,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "population mean",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -150,7 +104,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 345.5
+    "width": 262.5
   },
   "right": {
     "id": "f66fffda3a017571",
@@ -166,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Number System/Overflow and Underflow.md",
+                "file": "Linear Regression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +130,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Overflow and Underflow"
+              "title": "Backlinks for Linear Regression"
             }
           },
           {
@@ -264,12 +218,32 @@
             "state": {
               "type": "juggl_nodes",
               "state": {},
+              "icon": "lucide-ghost",
+              "title": "juggl_nodes"
+            }
+          },
+          {
+            "id": "dbb0c5f678d480fc",
+            "type": "leaf",
+            "state": {
+              "type": "juggl_style",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "juggl_style"
+            }
+          },
+          {
+            "id": "733d829a812f9f4e",
+            "type": "leaf",
+            "state": {
+              "type": "juggl_nodes",
+              "state": {},
               "icon": "ag-node-list",
               "title": "Juggl nodes"
             }
           },
           {
-            "id": "dbb0c5f678d480fc",
+            "id": "4190922229a9712d",
             "type": "leaf",
             "state": {
               "type": "juggl_style",
@@ -296,41 +270,44 @@
       "command-palette:Open command palette": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "juggl:Juggl global graph": false,
-      "fix-math:Current file": false
+      "github-sync:Sync with Remote": false
     }
   },
-  "active": "6e421d9109e44406",
+  "active": "36743541ed33497b",
   "lastOpenFiles": [
     "Estimation Theory.md",
-    "Maximum Likel.md",
-    "Basics/Measures of Variability.md",
-    "Basics/Z score & Mahalanobis Distance.md",
-    "00-Dump/00XX - Todo.md",
-    "00-Dump/00XX - Basic Definition in Statistics.md",
-    "00-Dump/00XX - Partial Derivatives.md",
-    "00-Dump/00XX - Likelihood Function.md",
-    "00-Dump/00XX - Dump.md",
-    "Maths/Measure Theory.md",
+    "2026-02-18.md",
+    "Untitled 1.base",
+    "Untitled.base",
+    "Untitled.canvas",
+    "Excalidraw/Drawing 2026-02-18 02.28.00.excalidraw.md",
+    "Excalidraw",
+    "Linear Algebra.md",
     "Guha ML Roadmap.md",
-    "Markov's Inequality.md",
     "Linear Regression.md",
     "Logistic Regression.md",
-    "Basics/Measures of Central Tendency.md",
-    "Basics/Kernel Functions and Profile.md",
-    "Linear Algebra.md",
-    "Maths/Probability.md",
-    "Basics/Kernel Density Estimation.md",
     "Basics/Covariance Matrix.md",
     "Maths/Norm.md",
+    "Basics/Density Estimation.md",
+    "Markov's Inequality.md",
+    "Maths/Pre-Image.md",
+    "Maths/Probability.md",
+    "Maths/Random Variable.md",
+    "Perceptron.md",
+    "Basics/Measures of Variability.md",
+    "Basics/Measures of Central Tendency.md",
+    "Basics/Distributions.md",
+    "Basics/Z score & Mahalanobis Distance.md",
+    "Mean Shift Clustering.md",
     "Gradient Ascent.md",
     "Classification.md",
-    "Perceptron.md",
+    "Basics/Kernel Density Estimation.md",
     "Pasted image 20260119185823.png",
     "Pasted image 20260119185838.png",
     "Pasted image 20260205203124.png",
-    "Maths/Random Variable.md",
+    "00-Dump/00XX - Todo.md",
     "00-Dump/00XX - latex_symbols.pdf",
-    "Maths/Borel Sigma Algebra.md",
+    "Maths/Measure Theory.md",
     "00-Dump",
     "Pasted image 20260108161826.png",
     "Maths",
@@ -343,10 +320,6 @@
     "00-Images/kernel-density-estimation.png",
     "00-Images/standard-gaussian-kernel-and-effects-of-bandwith.png",
     "00-Images/kernel-functions-low-vs-high-bandwith.svg",
-    "00-Images",
-    "00-Templates",
-    "Untitled.canvas",
-    "Excalidraw",
-    "00-Pdfs"
+    "00-Images"
   ]
 }
