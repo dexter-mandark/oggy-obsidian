@@ -337,21 +337,21 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "juggl:Juggl global graph": false,
-      "fix-math:Current file": false
+      "juggl:Juggl global graph": false
     }
   },
   "active": "cbdb504e6bd4fc6f",
   "lastOpenFiles": [
-    "Gaussian Mixture Models.md",
     "Estimation Theory.md",
+    "Maximum Likelihood Estimation (MLE).md",
+    "Basics/Z score & Mahalanobis Distance.md",
+    "Gaussian Mixture Models.md",
     "Basics/Measures of Variability.md",
     "Basics/Measures of Central Tendency.md",
     "Gradient Ascent.md",
     "Guha ML Roadmap.md",
     "Linear Regression.md",
     "Markov's Inequality.md",
-    "Maximum Likelihood Estimation (MLE).md",
     "Mean Shift Clustering.md",
     "Object Tracking.md",
     "Classification.md",
@@ -360,7 +360,6 @@
     "00-Dump/00XX - Todo.md",
     "00-Dump/00XX - latex_symbols.pdf",
     "Maximum Likel.md",
-    "Basics/Z score & Mahalanobis Distance.md",
     "00-Dump/00XX - Basic Definition in Statistics.md",
     "00-Dump/00XX - Partial Derivatives.md",
     "00-Dump/00XX - Likelihood Function.md",
