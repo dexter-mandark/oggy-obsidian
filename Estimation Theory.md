@@ -96,7 +96,11 @@ This approach is more flexible, as it can capture complex distributions that do 
 > $$\text{Bias}_{\boldsymbol{\theta}}(\hat{\theta}) = \mathbb{E}_{\boldsymbol{\theta}}[ \hat{\theta}] - \boldsymbol{\theta}$$
 > Where:
 > - $\mathbb{E}_{\boldsymbol{\theta}}[\hat{\theta}]$ denotes the expected value of the estimator with respect to the distribution $P_{\boldsymbol{\theta}}$.
+<<<<<<< HEAD
 > - If $\text{Bias}_{\boldsymbol{\theta}}(\hat{\theta}) = 0$ for all $\boldsymbol{\theta} \in \boldsymbol{\Theta}$, the estimator is called **unbiased**.
+=======
+> - If $\text{Bias}_{\boldsymbol{\theta}}(\hat{\theta}) = 0$  for all $\boldsymbol{\theta} \in \boldsymbol{\Theta}$, the estimator is called **unbiased**.
+>>>>>>> 4b5aa16882932006cf4d2d597898f7001118d633
 > - If $\text{Bias}_{\boldsymbol{\theta}}(\hat{\theta}) > 0$, the estimator tends to overestimate $\boldsymbol{\theta}$.
 > - If $\text{Bias}_{\boldsymbol{\theta}}(\hat{\theta}) < 0$, the estimator tends to underestimate $\boldsymbol{\theta}$.
 > 
