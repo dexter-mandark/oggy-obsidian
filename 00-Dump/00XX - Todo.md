@@ -4,15 +4,18 @@
 		- [ ] Chebeshey Inequality
 		- [ ] T-score
 	- [ ] Covariance Matrix determinant
-	
-
 	- [ ] Mahanabis distance
+
+- [ ] Estimation Theory
+	- [ ] Expand upon the bias-variance trade-off
+	- [ ] Expand upon IID
+	- [ ] MLE
+		- [ ] What happens if data is not IID ?
 
 - [ ] Norm Related
 	- [x] Chebehsy Distance
 	- [x] L-infty norm
 	- [ ] Why these many measures for distance
-
 
 - [ ] KDE
 	- [ ] Epanechnikov Functions as 'optimal'
@@ -30,7 +33,6 @@
 - [ ] Linear Regression
 	- [ ] Residual Standard Error, F-statistics
 	- [ ] Page 78 onwards in ISLP book
-
 
 - [ ] Perceptron
 	- [ ] Perceptron learning algorithm (like logistic regression, correct points have no weight-age, fix that)
