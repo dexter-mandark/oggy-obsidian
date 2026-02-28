@@ -158,10 +158,7 @@ $$\begin{align} \mathbf{d}^T C^{-1} \mathbf{d} &= \begin{bmatrix}  (x_1 - \mu_1)
 
 So the expression above is exactly , which is the Mahalanobis distance squared. In the uncorrelated case it reduces perfectly to the scaled Z-score distance.​
 
-Now add **correlation**. The ellipse tilts. The covariance matrix $C$ now has non-zero off-diagonal entries that encode this tilt. Its inverse $C^{-1}$ — called the **precision matrix** — encodes the same correlation structure, but inverted: it tells you which directions are "tight" (penalised heavily) versus "loose" (penalised lightly). Plugging $C^{-1}$ into the same formula automatically rotates the distance measurement to align with the ellipse.[[builtin](https://builtin.com/data-science/mahalanobis-distance)]​
-
-
-
+Now add **correlation**. The ellipse tilts. The covariance matrix $C$ now has non-zero off-diagonal entries that encode this tilt. Its inverse $C^{-1}$ — called the **precision matrix** — encodes the same correlation structure, but inverted: it tells you which directions are "tight" (penalised heavily) versus "loose" (penalised lightly). Plugging $C^{-1}$ into the same formula automatically rotates the distance measurement to align with the ellipse.
 Given a dataset with $N$ $d$-dimensional data points $\mathbf{x}^i \in \mathbb{R}^d$, mean vector $\boldsymbol{\mu} \in \mathbb{R}^d$, and covariance matrix $C \in \mathbb{R}^{d \times d}$, the Mahalanobis distance of a point $\mathbf{x}$ from the mean is:​
 
 $$D_M(\mathbf{x}) = \sqrt{(\mathbf{x} - \boldsymbol{\mu})^T \, C^{-1} \, (\mathbf{x} - \boldsymbol{\mu})}$$
@@ -173,95 +170,17 @@ This is a **scalar**, a weighted quadratic form. The matrix $C^{-1}$ sits in the
 
 ## What $C^{-1}$ Is Actually Doing
 
-It helps to think of $C^{-1}$ as performing two operations simultaneously:[[mccormickml](https://mccormickml.com/2014/07/22/mahalanobis-distance/)]​
-
+It helps to think of $C^{-1}$ as performing two operations simultaneously:
 **Rescaling:** Dimensions with large variance contribute less to the distance (they're penalised by $1/\sigma^2$). Dimensions with small variance contribute more. This is the same thing Z-scores do.
+**Rotating:** The off-diagonal terms of $C^{-1}$ add cross-terms between dimensions. Concretely, for the 2D case with covariance $\sigma_{XY}$:$$C^{-1} = \frac{1}{\det(C)}\begin{bmatrix} \sigma_Y^2 & -\sigma_{XY} \\ -\sigma_{XY} & \sigma_X^2 \end{bmatrix}$$
 
-**Rotating:** The off-diagonal terms of $C^{-1}$ add cross-terms between dimensions. Concretely, for the 2D case with covariance $\sigma_{XY}$:
-
-C−1=1det⁡(C)[σY2−σXY−σXYσX2]C^{-1} = \frac{1}{\det(C)}\begin{bmatrix} \sigma_Y^2 & -\sigma_{XY} \\ -\sigma_{XY} & \sigma_X^2 \end{bmatrix}C−1=det(C)1[σY2−σXY−σXYσX2]
-
-The negative $-\sigma_{XY}$ terms penalise deviations that go against the correlation (like Jack's low hours + high score) and effectively credit deviations that go with it (like Student C's high hours + high score). This is exactly what Z-scores fail to do.[[mccormickml](https://mccormickml.com/2014/07/22/mahalanobis-distance/)]​
+The negative $-\sigma_{XY}$ terms penalise deviations that go against the correlation (like Jack's low hours + high score) and effectively credit deviations that go with it (like Student C's high hours + high score). This is exactly what Z-scores fail to do.
 
 ## Key Properties
 
-**Scale invariance:** Multiplying any variable by a constant doesn't change the Mahalanobis distance, because the scaling gets absorbed into $C$ and cancelled by $C^{-1}$.[[shadecoder](https://www.shadecoder.com/topics/mahalanobis-distance-a-comprehensive-guide-for-2025)]​
+**Scale invariance:** Multiplying any variable by a constant doesn't change the Mahalanobis distance, because the scaling gets absorbed into $C$ and cancelled by $C^{-1}$.
+**Rotation invariance:** Rotating the coordinate axes doesn't change Mahalanobis distance either — it always measures distance relative to the data's own geometry, not the coordinate system.
+**Reduces to Euclidean distance** when $C = I$ (the identity matrix), i.e., all variables have unit variance and zero covariance.
+**Reduces to Z-score distance** when $C$ is diagonal (variables are uncorrelated but may have different variances).​
 
-**Rotation invariance:** Rotating the coordinate axes doesn't change Mahalanobis distance either — it always measures distance relative to the data's own geometry, not the coordinate system.[[en.wikipedia](https://en.wikipedia.org/wiki/Mahalanobis_distance)]​
-
-**Reduces to Euclidean distance** when $C = I$ (the identity matrix), i.e., all variables have unit variance and zero covariance.[[mccormickml](https://mccormickml.com/2014/07/22/mahalanobis-distance/)]​
-
-**Reduces to Z-score distance** when $C$ is diagonal (variables are uncorrelated but may have different variances).[[mccormickml](https://mccormickml.com/2014/07/22/mahalanobis-distance/)]​
-
-So Mahalanobis distance is the most general form — Euclidean distance and Z-score distance are both special cases of it.
-
-
-
-
-
-If the variables are uncorrelated and have a variance of 1, the Mahalanobis distance becomes equivalent to the standard Euclidean distance.
-
-
-Let's set up concrete numbers.
-
-## The Dataset Setup
-
-Suppose from a class of students we observe:
-
-- Mean hours studied: $\mu_{\text{hrs}} = 5$, with $\sigma_{\text{hrs}} = 2$
-    
-- Mean exam score: $\mu_{\text{score}} = 70%$, with $\sigma_{\text{score}} = 10$
-    
-- Strong positive correlation: $r = 0.9$ (study more → score higher)
-    
-
-Our three students:
-
-## Step 1 — Compute Z-scores
-
-For each student, standardize each dimension independently:
-
-z=x−μσz = \frac{x - \mu}{\sigma}z=σx−μ
-
-## Step 2 — What Z-scores Miss
-
-The problem is the direction of the deviation, not just the magnitude. Given $r = 0.9$, the "expected" pattern is:
-
-high hours↔high score,low hours↔low score\text{high hours} \leftrightarrow \text{high score}, \quad \text{low hours} \leftrightarrow \text{low score}high hours↔high score,low hours↔low score
-
-- **Student C** has $z_{\text{hrs}} = +1.5$ and $z_{\text{score}} = +1.5$ — both deviations in the **same direction**, consistent with the correlation. They sit _along_ the data ellipse.
-    
-- **Jack** has $z_{\text{hrs}} = -1.5$ and $z_{\text{score}} = +1.5$ — deviations in **opposite directions**, cutting _across_ the correlation structure. He sits far off the diagonal band.
-    
-
-Z-score distance is blind to this because it only uses $|z_j|$, not whether the z-scores are jointly consistent with the covariance structure.
-
-## Step 3 — Mahalanobis Sees the Difference
-
-The covariance matrix with these parameters is:
-
-C=[σhrs2r σhrs σscorer σhrs σscoreσscore2]=[41818100]C = \begin{bmatrix} \sigma_{\text{hrs}}^2 & r\,\sigma_{\text{hrs}}\,\sigma_{\text{score}} \\ r\,\sigma_{\text{hrs}}\,\sigma_{\text{score}} & \sigma_{\text{score}}^2 \end{bmatrix} = \begin{bmatrix} 4 & 18 \\ 18 & 100 \end{bmatrix}C=[σhrs2rσhrsσscorerσhrsσscoreσscore2]=[41818100]
-
-With $\det(C) = 4 \times 100 - 18^2 = 76$, the inverse is:
-
-C−1=176[100−18−184]C^{-1} = \frac{1}{76}\begin{bmatrix} 100 & -18 \\ -18 & 4 \end{bmatrix}C−1=761[100−18−184]
-
-The Mahalanobis distance squared is $D^2 = \mathbf{d}^T C^{-1} \mathbf{d}$, where $\mathbf{d} = \mathbf{x} - \boldsymbol{\mu}$ is the raw deviation vector.
-
-**For Jack:** $\mathbf{d} = \begin{bmatrix} 2-5 \ 85-70 \end{bmatrix} = \begin{bmatrix} -3 \ 15 \end{bmatrix}$
-
-D2=176[−315][100−18−184][−315]=176(1710+1710)=45  ⟹  D≈6.71D^2 = \frac{1}{76}\begin{bmatrix}-3 & 15\end{bmatrix}\begin{bmatrix} 100 & -18 \\ -18 & 4 \end{bmatrix}\begin{bmatrix}-3\\15\end{bmatrix} = \frac{1}{76}(1710 + 1710) = 45 \implies D \approx 6.71D2=761[−315][100−18−184][−315]=761(1710+1710)=45⟹D≈6.71
-
-**For Student C:** $\mathbf{d} = \begin{bmatrix} 3 \ 15 \end{bmatrix}$
-
-D2=176[315][100−18−184][315]=176(90+90)≈2.37  ⟹  D≈1.54D^2 = \frac{1}{76}\begin{bmatrix}3 & 15\end{bmatrix}\begin{bmatrix} 100 & -18 \\ -18 & 4 \end{bmatrix}\begin{bmatrix}3\\15\end{bmatrix} = \frac{1}{76}(90 + 90) \approx 2.37 \implies D \approx 1.54D2=761[315][100−18−184][315]=761(90+90)≈2.37⟹D≈1.54
-
-## The Punchline
-
-|Student|Euclidean Z-distance|Mahalanobis Distance|
-|---|---|---|
-|Oggy|0.71|0.51 — unremarkable|
-|Jack|2.12|**6.71** — genuinely anomalous|
-|Student C|2.12|1.54 — expected pattern|
-
-Z-scores declare Jack and Student C equally unusual. Mahalanobis correctly identifies Jack as far more anomalous (distance 6.71 vs 1.54), because it accounts for the fact that Jack's low-hours + high-score combination cuts directly against the correlation structure of the data. The $C^{-1}$ term in Mahalanobis is doing the heavy lifting — it _penalises_ deviations that violate the expected covariance pattern and _rewards_ deviations that follow it.
+So Mahalanobis distance is the most general form, Euclidean distance and Z-score distance are both special cases of it.
