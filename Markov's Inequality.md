@@ -44,6 +44,4 @@ $$\begin{align} \int_{a}^{\infty} x f(x)\,dx & \ge \int_{a}^{\infty} a f(x)\,dx 
 Finally, I can substitute this result into the original expectation to get:
 $$\begin{align} E[X] & \ge a\,{P}(X \ge a) \\ \\ \frac{E[X]}{a} & \ge \,{P}(X \ge a)\end{align}$$
 
-
-
 ## Chebeshey's Inequality
