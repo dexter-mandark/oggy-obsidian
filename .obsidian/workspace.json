@@ -123,26 +123,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-Dump/Logistic Regression.md",
+                "file": "Linear Regression.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Logistic Regression"
-            }
-          },
-          {
-            "id": "1529ace86f80450a",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Linear Regression"
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -161,7 +151,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "population mean",
+                "query": "L1",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -337,6 +327,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "github-sync:Sync with Remote": false,
       "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -348,8 +339,12 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "a0a11154e8efa5d4",
+  "active": "cbdb504e6bd4fc6f",
   "lastOpenFiles": [
+    "00-Dump/Logistic Regression.md",
+    "Basics/Kernel Functions and Profile.md",
+    "Pasted image 20260302064812.png",
+    "Perceptron.md",
     "Excalidraw/Drawing 2026-02-18 02.28.00.excalidraw.md",
     "Excalidraw",
     "PDF-Dump/DiscriminantFunction (3).pdf",
@@ -366,12 +361,10 @@
     "Basics/Z score & Mahalanobis Distance.md",
     "Maximum Likelihood Estimation (MLE).md",
     "Estimation Theory.md",
-    "00-Dump/Logistic Regression.md",
     "Basics/Measures of Variability.md",
     "Basics/Covariance Matrix.md",
     "Pasted image 20260223033428.png",
     "Gradient Ascent.md",
-    "Perceptron.md",
     "Maths/Norm.md",
     "Gaussian Mixture Models.md",
     "Basics/Measures of Central Tendency.md",
@@ -385,8 +378,6 @@
     "00-Dump/00XX - Basic Definition in Statistics.md",
     "00-Dump/00XX - Partial Derivatives.md",
     "00-Dump/00XX - Likelihood Function.md",
-    "00-Dump/00XX - Dump.md",
-    "Maths/Measure Theory.md",
     "Pasted image 20260119185823.png",
     "Pasted image 20260119185838.png",
     "Pasted image 20260205203124.png",
@@ -395,7 +386,6 @@
     "Pasted image 20251115211943.png",
     "00-Images/logistic-function-curve.png",
     "00-Images/kernel-density-estimation.png",
-    "00-Images/standard-gaussian-kernel-and-effects-of-bandwith.png",
     "Untitled.canvas"
   ]
 }
