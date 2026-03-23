@@ -11,14 +11,10 @@
             "id": "57b5bcebc06154c1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linear Regression.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Linear Regression"
+              "title": "New tab"
             }
           }
         ]
@@ -79,8 +75,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 262.5,
-    "collapsed": true
+    "width": 262.5
   },
   "right": {
     "id": "f66fffda3a017571",
@@ -251,8 +246,8 @@
   },
   "active": "57b5bcebc06154c1",
   "lastOpenFiles": [
-    "Estimation Theory.md",
     "Linear Regression.md",
+    "Estimation Theory.md",
     "Perceptron.md",
     "Maximum Likelihood Estimation (MLE).md",
     "Gaussian Mixture Models.md",
