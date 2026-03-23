@@ -79,7 +79,7 @@ But I can get rid of negative values by using absolute values as well, why squar
 
 ## Co-Variance
 
-Co-variance describes the **joint variability** of two random variables. It tells me how two variables tend to move in relation to each other.
+**Co-variance describes the joint variability of two random variables.** It tells me how two variables tend to move in relation to each other.
 Variance tells me how a single variable varies from its mean. Co-variance tells me how two variables vary from their respective means, in relation to each other.
 
 Co-variance of two variables $X, Y$ is denoted as $\operatorname{cov}(X, Y)$ or sometimes as $\sigma_{XY}$.
@@ -97,7 +97,10 @@ Co-variance of two variables $X, Y$ is denoted as $\operatorname{cov}(X, Y)$ or 
 ^def-probabilistic-covariance
 
 >[!cite] Co-variance
->Co-variance between two variables is the average product of the deviations of each variable from their respective means.
+>Given a dataset $\mathcal{D} = \{(x_i, y_i)\}_{i=1}^{N}$.
+>I can refer to the two-dimensions as two random variables $X$ and $Y$. For the $k$-th data-point, the observed value of $X$ is $x_k$ and the observed value of $Y$ is $y_k$.
+>
+>Co-variance between two random variables  $X, Y$ is the average product of the deviations of each variable from their respective means.
 >For a sample of the population, co-variance $s_{XY}$  between variables $X, Y$ is defined as $\rightarrow$
 >
 >$$s_{XY} = \frac{\sum_{i=1}^{n}(x_{i} - \bar{x})(y_{i} - \bar{y})}{n-1}$$
@@ -135,7 +138,7 @@ The **correlation coefficient** (often denoted as $r$ for a sample or $\rho
 Basically, covariance is "normalized" into a unit-less measure called the *correlation coefficient, which is always between $[-1,1]$* and provides a clearer indication of the strength of the relationship.
 
 >[!cite] Co-relation
->The correlation coefficient between $X, Y$ is calculated by taking the covariance and normalizing it by dividing by the product of the standard deviations of the two variables.
+>The correlation coefficient between two random variable $X, Y$ is calculated by taking the covariance and normalizing it by dividing by the product of the standard deviations of the two variables.
 >
 >$${\rho_{XY}} = \frac{\operatorname{cov}(X, Y)}{\sigma_{X}\sigma_{Y}}$$
 ^def-corelation

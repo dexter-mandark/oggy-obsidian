@@ -47,9 +47,11 @@ I need a measure that takes into account the **context** of each distribution, s
 >A **z-score**, also known as a **standard score**, is expressed in terms of standard deviations from the mean, indicating how many standard deviations a data point $x$ is above or below the mean.
 >
 > $$z=\frac{x-\mu}{\sigma}$$
+> *Rather than asking how far a data-point is from the mean, I ask "How many standard deviations away is this data-point from the mean ?"*
+>
+> Z-score is a **standardization** because it converts data to a common scale with **mean 0 and standard deviation 1.​**
 ^def-zscore
 
-Z-score is a **standardization** because it converts data to a common scale with **mean 0 and standard deviation 1.​**
 
 The sign and magnitude of the z-score provide a clear interpretation of a data point's position within its distribution:​
 - **Positive z-score:** The raw score is above the mean. A z-score of $+2$ means the data point is $2$ standard deviations above the mean.
@@ -58,7 +60,7 @@ The sign and magnitude of the z-score provide a clear interpretation of a data p
 
 ![[grading methods in a normal distribution.png|#invert_B]]
 
-#### What Works
+#### Where Z-score Shines
 
 ###### Comparing Different Datasets
 
@@ -80,16 +82,38 @@ Z-scores help identify data points that are significantly different from the res
 
 In a normal distribution, z-scores can be used with a z-table to find the probability of a score occurring. For example, a z-score of 0 corresponds to the 50th percentile.
 
-#### The Limitation of Z-Scores: Ignoring Correlations
+#### Where Z-score Fails: Ignores Correlations
 
 Z-scores work well for uni-variate data or when features are **uncorrelated**. However, in multivariate data, when correlations exist, z-scores alone are insufficient because they treat each dimension independently.​
 
 Suppose I'm analyzing student performance with two features: hours studied and exam score. These variables are highly correlated.​
-Consider two students:
-- Oggy: studied 5 hours, scored 70% (slightly above average in both)
-- Jack: studied 2 hours, scored 85% (below average in study time, well above average in score)
+- Mean hours studied: $\mu_{\text{hrs}} = 5$, with $\sigma_{\text{hrs}} = 2$
+- Mean exam score: $\mu_{\text{score}} = 70\%$, with $\sigma_{\text{score}} = 10$
+- Strong positive correlation: $r = 0.9$ (study more $\rightarrow$ score higher)
 
-If I compute z-scores for each dimension independently and then calculate a distance, Jack might appear similar to the mean in aggregate. However, Jack's combination of low study time and high score is actually **highly unusual** given the strong positive correlation between these variables. *Standard z-score distance metrics would fail to capture this anomaly because they don't account for the relationship between dimensions.*
+Consider three students:
+
+| Student | Hours Studied | Exam Score |
+| ------- | ------------- | ---------- |
+| Jack    | 6 hrs         | 75%        |
+| Oggy    | 2 hrs         | 85%        |
+| Bob     | 8 hrs         | 85%        |
+If I compute z-scores for each dimension independently and then calculate a distance:
+
+| Student | $z_{\text{hrs}}$ | $z_{\text{score}}$  | Euclidean Z-distance $\sqrt{z_{\text{hrs}}^2 + z_{\text{score}}^2}$ |
+| ------- | ---------------- | ------------------- | ------------------------------------------------------------------- |
+| Jack    | $(6-5)/2 = +0.5$ | $(75-70)/10 = +0.5$ | $\sqrt{0.25 + 0.25} \approx 0.71$                                   |
+| Oggy    | $(2-5)/2 = -1.5$ | $(85-70)/10 = +1.5$ | $\sqrt{2.25 + 2.25} \approx 2.12$                                   |
+| Bob     | $(8-5)/2 = +1.5$ | $(85-70)/10 = +1.5$ | $\sqrt{2.25 + 2.25} \approx 2.12$                                   |
+
+Oggy and Bob have identical Euclidean z-distances from the mean. According to z-scores, they are equally anomalous. But intuitively this is wrong, Bob studied a lot and scored high, which is exactly what I'd expect given the strong correlation. However Oggy's
+combination of low study time and high score is actually **highly unusual** given the strong positive correlation between these variables.
+
+*The problem is the direction of the deviation, not just the magnitude.* Given $r = 0.9$, the "expected" pattern is: high hour $\leftrightarrow$ high score, low hours $\leftrightarrow$ low score
+- Bob has $z_{\text{hrs}} = +1.5$ and $z_{\text{score}} = +1.5$: both deviations are in the **same direction**, consistent with the correlation. They sit _along_ the data ellipse.
+- Oggy has $z_{\text{hrs}} = -1.5$ and $z_{\text{score}} = +1.5$: both deviations in **opposite directions**, cutting _across_ the correlation structure. He sits far off the diagonal band.
+
+**Z-score distance is blind to the co-relation between the two features because it only uses $|z_j|$, not whether the z-scores are jointly consistent with the covariance structure.**
 
 >[!danger]
 >- When variables are correlated, the "shape" of the data distribution is not a simple sphere or ellipse aligned with the axes. Instead, it's an ellipse tilted at an angle, reflecting the correlation structure.
@@ -101,5 +125,62 @@ This is where Mahalanobis distance comes in.
 
 The Mahalanobis distance (named after *Prasanta Chandra Mahalanobis*) is a **unit-less, scale-invariant, multivariate generalization of the z-score** that accounts for both the variance of each variable and the covariance between variables.
 
+- Z-score distance asks: "How far is this point from the mean, measured in standard deviations, along each axis independently?"
+- Mahalanobis distance asks: **"How far is this point from the mean, measured relative to the natural shape and orientation of the entire data distribution?"**​
 
-If the variables are uncorrelated and have a variance of 1, the Mahalanobis distance becomes equivalent to the standard Euclidean distance.
+> [!tip] Mahalanobis Distance vs Euclidean Distance
+> In a regular Euclidean space, variables (e.g. $x, y, z$) are represented by axes drawn at right angles to each other. The distance between any two points can be measured with a ruler. *For uncorrelated variables, the Euclidean distance equals the Mahalanobis distance.*
+> However, if two or more variables are correlated the axes are no longer at right angles, and the measurements become impossible with a ruler.
+>
+> In addition, if you have more than three variables, you can’t plot them in regular 3-D space at all. Mahalanobis distance solves this measurement problem, as it measures distances between points, even correlated points for multiple variables.
+>
+> The key shift is that Mahalanobis distance treats the data cloud itself as the ruler.
+> - If the data is stretched along a diagonal (due to correlation), then moving along that diagonal is "cheap", it's expected.
+> - Moving perpendicular to it is "expensive", it's genuinely anomalous.
+> 
+> Z-score distance has no concept of this; it treats every axis as equally independent and equally scaled.
+
+#### Deriving Mahalanobis Distance
+
+Let's start with the simplest case: **one dimension**. The natural "distance" from the mean, normalized by the spread, is just the Z-score:
+$$d = \frac{x - \mu}{\sigma} = (x - \mu) \cdot \sigma^{-1}$$
+Now, for **two uncorrelated dimensions**. There's no tilt to the ellipse (formed by the data cloud), it's axis-aligned. I can independently normalize each axis by its own standard deviation and compute Euclidean distance in that normalized space.
+For a data-point $x =\begin{bmatrix} x_1 \\ x_2 \end{bmatrix}$ and mean $\mu = \begin{bmatrix}  \mu_1 \\ \mu_2 \end{bmatrix}$. The Mahalanobis distance $D^2$ is given by:
+$$D^2 = \frac{(x_1 - \mu_1)^2}{\sigma_1^2} + \frac{(x_2 - \mu_2)^2}{\sigma_2^2}$$
+
+With no correlation, the covariance matrix is diagonal.$$\begin{align} C &= \begin{bmatrix} \sigma_1^2 & 0 \\ 0 & \sigma_2^2 \end{bmatrix} \\ \\ C^{-1} &= \begin{bmatrix} 1/\sigma_1^2 & 0 \\ 0 & 1/\sigma_2^2 \end{bmatrix} \end{align}$$
+The vector representing the distance between $x$ and mean $\mu$ is the called the **deviation vector**. $$\mathbf{d} = x - \mu = \begin{bmatrix}  (x_1 - \mu_1) \\ (x_2 - \mu_2) \end{bmatrix}$$
+
+Lets say I multiply $\mathbf{d}$ with $C^{-1}$, just for the sake of it. Then again multiply the whole thing with $\mathbf{d}^T$.
+
+$$\begin{align} \mathbf{d}^T C^{-1} \mathbf{d} &= \begin{bmatrix}  (x_1 - \mu_1) &  (x_2 - \mu_2) \end{bmatrix} \begin{bmatrix} \frac{1}{\sigma_1^2} & 0 \\ 0 & \frac{1}{\sigma_2^2} \end{bmatrix} \begin{bmatrix}  (x_1 - \mu_1) \\ (x_2 - \mu_2) \end{bmatrix} \\ &= \begin{bmatrix}  (x_1 - \mu_1) &  (x_2 - \mu_2) \end{bmatrix} \begin{bmatrix} \frac{(x_1 - \mu_1)}{\sigma_1^2} & 0 \\ 0 & \frac{(x_1 - \mu_1)}{\sigma_2^2} \end{bmatrix} \\ \\ &= \frac{(x_1 - \mu_1)^2}{\sigma_1^2} + \frac{(x_2 - \mu_2)^2}{\sigma_2^2} \\ &= D^2 \end{align}$$
+
+
+So the expression above is exactly , which is the Mahalanobis distance squared. In the uncorrelated case it reduces perfectly to the scaled Z-score distance.​
+
+Now add **correlation**. The ellipse tilts. The covariance matrix $C$ now has non-zero off-diagonal entries that encode this tilt. Its inverse $C^{-1}$ — called the **precision matrix** — encodes the same correlation structure, but inverted: it tells you which directions are "tight" (penalised heavily) versus "loose" (penalised lightly). Plugging $C^{-1}$ into the same formula automatically rotates the distance measurement to align with the ellipse.
+Given a dataset with $N$ $d$-dimensional data points $\mathbf{x}^i \in \mathbb{R}^d$, mean vector $\boldsymbol{\mu} \in \mathbb{R}^d$, and covariance matrix $C \in \mathbb{R}^{d \times d}$, the Mahalanobis distance of a point $\mathbf{x}$ from the mean is:​
+
+$$D_M(\mathbf{x}) = \sqrt{(\mathbf{x} - \boldsymbol{\mu})^T \, C^{-1} \, (\mathbf{x} - \boldsymbol{\mu})}$$
+
+Let $\mathbf{d} = \mathbf{x} - \boldsymbol{\mu}$ be the deviation vector. Then:
+$$D_M^2(\mathbf{x}) = \mathbf{d}^T C^{-1} \mathbf{d}$$
+
+This is a **scalar**, a weighted quadratic form. The matrix $C^{-1}$ sits in the middle and acts as the weighting operator, stretching and rotating the deviation vector before taking the dot product.
+
+## What $C^{-1}$ Is Actually Doing
+
+It helps to think of $C^{-1}$ as performing two operations simultaneously:
+**Rescaling:** Dimensions with large variance contribute less to the distance (they're penalised by $1/\sigma^2$). Dimensions with small variance contribute more. This is the same thing Z-scores do.
+**Rotating:** The off-diagonal terms of $C^{-1}$ add cross-terms between dimensions. Concretely, for the 2D case with covariance $\sigma_{XY}$:$$C^{-1} = \frac{1}{\det(C)}\begin{bmatrix} \sigma_Y^2 & -\sigma_{XY} \\ -\sigma_{XY} & \sigma_X^2 \end{bmatrix}$$
+
+The negative $-\sigma_{XY}$ terms penalise deviations that go against the correlation (like Jack's low hours + high score) and effectively credit deviations that go with it (like Student C's high hours + high score). This is exactly what Z-scores fail to do.
+
+## Key Properties
+
+**Scale invariance:** Multiplying any variable by a constant doesn't change the Mahalanobis distance, because the scaling gets absorbed into $C$ and cancelled by $C^{-1}$.
+**Rotation invariance:** Rotating the coordinate axes doesn't change Mahalanobis distance either — it always measures distance relative to the data's own geometry, not the coordinate system.
+**Reduces to Euclidean distance** when $C = I$ (the identity matrix), i.e., all variables have unit variance and zero covariance.
+**Reduces to Z-score distance** when $C$ is diagonal (variables are uncorrelated but may have different variances).​
+
+So Mahalanobis distance is the most general form, Euclidean distance and Z-score distance are both special cases of it.
