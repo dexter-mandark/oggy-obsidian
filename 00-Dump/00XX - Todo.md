@@ -7,6 +7,7 @@
 	- [ ] Mahanabis distance
 
 - [ ] Estimation Theory
+	- [ ] Upper bound of variance of an estimator
 	- [ ] Expand upon the bias-variance trade-off
 	- [ ] Expand upon IID
 	- [ ] MLE
@@ -39,3 +40,6 @@
 	- [ ] Loss Function
 	- [ ] Not just binary
 	- [ ] Linear Separability (XOR)
+
+- [ ] Constraint Optimization
+	- [ ] The entire 'inequality part

@@ -69,7 +69,7 @@ The sum of individual kernel functions creates the *correct shape of the density
 *Imagine each data point is a light source (the kernel). The bandwidth $h$ is the dial that controls the width and intensity of the light beam. The final KDE curve is the total brightness you see along the number line from all the lights combined.*
 
 For $x = \{3, 4, 7\}$, and $h \in \{ 0.2, 0.3, 0.4, 0.5, 1, 1.5 \}$, using the normal Kernel, the six different kernel density estimations are:
-![[kernel-functions-low-vs-high-bandwith.svg|]]
+![[kernel-functions-low-vs-high-bandwith.svg|997]]
 
 ###### Small Bandwidth: Under-smoothing and Overfitting
 

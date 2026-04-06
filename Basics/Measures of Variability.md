@@ -13,27 +13,26 @@ cssclasses:
 Variance quantifies the spread or dispersion of data points in relation to the mean.
 It is the average of the squared differences between each data point and the mean. A high variance indicates that the data points are widely spread out, while a low variance suggests they are clustered closely around the mean.
 
-*Variance is the average sum of squared deviations from the mean. Standard deviation is just positive square root of variance.*
-
+*Variance is the average of squared deviations from the mean. Standard deviation is just positive square root of variance.*
 
 There are two distinct formulas for variance, depending on whether I'm working with an entire **population** or a **sample** of that population.
 I denote variance as $\sigma^{2}$ or $s^{2}$, and standard deviation denoted by $\sigma$ or $s$.
 
 > [!cite] Variance
-> For a **population** of $N$ data points with mean $\mu$, the **population variance**, denoted by $\sigma^{2}$ is defined as $\rightarrow$
+> For a **population** of $N$, data points $\{x^i \mid x^{i} \in \mathbb{R}^1\}_{i=1}^{N}$ with mean $\mu$, the **population variance**, denoted by $\sigma^{2}$ is defined as $\rightarrow$
 >
-> $$\sigma^{2} = \frac{\sum_{i=1}^{N}(x_{i} - \mu)^{2}}{N}$$
+> $$\sigma^{2} = \frac{\sum_{i=1}^{N}(x^{i} - \mu)^{2}}{N}$$
 >
 > For a population **sample** of $n$ data points, with mean $\bar{x}$, the **sample variance**, denoted by $s^{2}$, is defined as $\rightarrow$
 >
-> $$s^{2} = \frac{\sum_{i=1}^{n}(x_{i} - \bar{x})^{2}}{n-1}$$
+> $$s^{2} = \frac{\sum_{i=1}^{n}(x^{i} - \bar{x})^{2}}{n-1}$$
 ^def-variance
 
 >[!tip] Why is there a distinction between standard deviation and variance ?
 >By taking the square root of the variance, the standard deviation reverses the initial squaring process, returning the measure of spread to the *original units* of the data.
 >That's the only distinction between variance and standard deviation. Both convey the same exact information.
 
-##### Why divide by $n-1$ ?
+#### Why divide by $n-1$ ?
 
 ###### Underestimation of Population Variance
 
@@ -84,36 +83,24 @@ Variance tells me how a single variable varies from its mean. Co-variance tells 
 
 Co-variance of two variables $X, Y$ is denoted as $\operatorname{cov}(X, Y)$ or sometimes as $\sigma_{XY}$.
 
->[!cite] Probabilistic definition of Co-variance
->Covariance for two [[Random Variable#^def-random-variable|random variables]] $X, Y$ is defined as the expected value of the product of their deviations from their individual expected values.
->
-> $$\operatorname{cov} (X,Y)= E{\Big [(X - E[X])(Y- E[Y])\Big]} $$
->
-> This can be further simplified as:
->
-> $${\begin{aligned}\operatorname {cov} (X,Y)&=\operatorname {E} \Big[\left(X-\operatorname {E} \left[X\right]\right)\left(Y-\operatorname {E} \left[Y\right]\right)\Big]\\&=\operatorname {E} \Big[XY-X\operatorname {E} \left[Y\right]-\operatorname {E} \left[X\right]Y+\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]\Big]\\&=\operatorname {E} \left[XY\right]-\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]-\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]+\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]\\ \\ \operatorname{cov}(X, Y) &=\operatorname {E} \left[XY\right]-\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]\end{aligned}}$$
->
-> This identity states that the *covariance of two variables is the expected value of their product minus the product of their expected values.*
-^def-probabilistic-covariance
-
 >[!cite] Co-variance
->Given a dataset $\mathcal{D} = \{(x_i, y_i)\}_{i=1}^{N}$.
->I can refer to the two-dimensions as two random variables $X$ and $Y$. For the $k$-th data-point, the observed value of $X$ is $x_k$ and the observed value of $Y$ is $y_k$.
+>Given a dataset $\mathcal{D} = \{(x^i, y^i) \mid x^i \in \mathbb{R}^1 , y^i \in \mathbb{R}^1\}_{i=1}^{N}$.
+>I can refer to the two-dimensions as two random variables $X$ and $Y$. For the $k$-th data-point, the observed value of $X$ is $x^k$ and the observed value of $Y$ is $y^k$.
 >
 >Co-variance between two random variables  $X, Y$ is the average product of the deviations of each variable from their respective means.
 >For a sample of the population, co-variance $s_{XY}$  between variables $X, Y$ is defined as $\rightarrow$
 >
->$$s_{XY} = \frac{\sum_{i=1}^{n}(x_{i} - \bar{x})(y_{i} - \bar{y})}{n-1}$$
+>$$s_{XY} = \frac{\sum_{i=1}^{n}(x^{i} - \bar{x})(y^{i} - \bar{y})}{n-1}$$
 >
 >For a population, co-variance $\sigma_{XY}$ is defined as $\rightarrow$
 >
->$$\sigma_{XY}= \frac{\sum_{i=1}^{N}(x_{i} - \mu_{x})(y_{i} - \mu_{y})}{N} $$
+>$$\sigma_{XY}= \frac{\sum_{i=1}^{N}(x^{i} - \mu_{x})(y^{i} - \mu_{y})}{N} $$
 ^def-covariance
 
 >[!tip] Covariance of $X$ with $X$
 >Covariance between the same random variable is nothing but the variance.
 >
->$$\sigma_{XX} = \frac{\sum_{i=1}^{N}(x_{i} - \mu_{x})(x_{i} - \mu_{x})}{N} = \frac{\sum_{i=1}^{N}(x_{i} - \mu_{x})^{2}}{N} = \sigma_{X} $$
+>$$\sigma_{XX} = \frac{\sum_{i=1}^{N}(x^{i} - \mu_{x})(x^{i} - \mu_{x})}{N} = \frac{\sum_{i=1}^{N}(x^{i} - \mu_{x})^{2}}{N} = \sigma^2_{X} $$
 
 ###### Interpreting Co-variance
 
@@ -154,3 +141,223 @@ Basically, covariance is "normalized" into a unit-less measure called the *corr
 >[!danger]
 >Both covariance and the standard Pearson correlation coefficient are exclusively concerned with measuring the strength and direction of a _linear_ relationship.
 >They are fundamentally *blind to any other kind of relationship*, no matter how strong or predictable it might be. This is one of the most significant limitations of these measures.
+
+## Properties of Variance
+
+>[!cite] Variance
+> Variance is the average of squared deviations from the mean. In other words, variance is the expected value of squared deviations from the expected value.$$\operatorname{Var}(X) = E\big[(X - E[X])^2\big]$$
+> This can be further expanded as,
+> $$  
+> \begin{aligned} \operatorname{Var}(X)  
+> &= E\big[(X - E[X])^2\big] \\  
+> &= E\big[X^2 + (E[X])^2 - 2X E[X] \big] \\  
+> &= E[X^2]+ (E[X])^2  - 2E[X]\cdot E[X] \\ \\  
+> \operatorname{Var}(X) &= E[X^2] - (E[X])^2 \end{aligned}  
+> $$
+> This is more often then not, the easiest way to compute variance.
+^def-probabilistic-variance
+
+###### Variance is Non-Negative
+
+$$  
+\operatorname{Var}(X) \geq 0  
+$$
+Since every term $(x^i - \mu)^2$ is a square, it is always $\geq 0$, so their average must be $\geq 0$ as well.
+
+###### Variance of a Constant is Zero
+
+$$  
+\operatorname{Var}(c) = 0  
+$$ Variance equals zero **only** when every data point equals the mean i.e., the variable is a constant. A constant $c$ never deviates from its own mean (since $E[c] = c$), so every squared deviation is zero.
+
+###### Adding a Constant Changes Nothing
+$$  
+\operatorname{Var}(X + c) = \operatorname{Var}(X)
+$$Adding a constant shifts every data point by the same amount, so it shifts the mean by the same amount too. $(x^i + c) - (\mu + c) = x^i - \mu$
+The spread of the data is unaffected by shifting the entire distribution.
+
+###### Scaling by a Constant
+
+$$  
+\operatorname{Var}(aX) = a^2 \operatorname{Var}(X)
+$$Using the definition and $E[aX] = aE[X]$:
+
+$$  
+\begin{align} \operatorname{Var}(aX) &= E\big[(aX - aE[X])^2\big] \\
+&= E\big[a^2 (X - E[X])^2\big] \\
+&= a^2 E\big[(X - E[X])^2\big] \\
+&= a^2 \operatorname{Var}(X)
+\end{align}
+$$     
+
+Scaling stretches deviations by $a$, and since variance squares deviations, the effect is $a^2$.
+This is why standard deviation scales linearly:
+$$  
+\operatorname{SD}(aX) = |a| \operatorname{SD}(X)
+$$
+###### General Linear Transformation
+$$  
+\boxed{\begin{align} \operatorname{Var}(aX + b) &= a^2 \operatorname{Var}(X) \\ \\ \operatorname{SD}(aX + b) &= |a| \operatorname{SD}(X) \end{align}}
+$$This combines shifting (no effect) and scaling (squared effect).
+
+## Properties of Covariance
+
+>[!cite] Probabilistic definition of Co-variance
+>Covariance for two [[Random Variable#^def-random-variable|random variables]] $X, Y$ is defined as the expected value of the product of their deviations from their individual expected values.
+>
+> $$\operatorname{cov} (X,Y)= E{\Big [(X - E[X])(Y- E[Y])\Big]} $$
+>
+> This can be further simplified as:
+>
+> $${\begin{aligned}\operatorname {cov} (X,Y)&=\operatorname {E} \Big[\left(X-\operatorname {E} \left[X\right]\right)\left(Y-\operatorname {E} \left[Y\right]\right)\Big]\\&=\operatorname {E} \Big[XY-X\operatorname {E} \left[Y\right]-\operatorname {E} \left[X\right]Y+\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]\Big]\\&=\operatorname {E} \left[XY\right]-\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]-\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]+\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]\\ \\ \operatorname{cov}(X, Y) &=\operatorname {E} \left[XY\right]-\operatorname {E} \left[X\right]\operatorname {E} \left[Y\right]\end{aligned}}$$
+>
+> This identity states that the *covariance of two variables is the expected value of their product minus the product of their expected values.*
+^def-probabilistic-covariance
+
+###### Covariance with a Constant is Zero  
+$$  
+\operatorname{Cov}(X, c) = 0
+$$
+A constant has no variability at all, so it cannot co-vary with anything.  
+###### Shifting by a Constant Changes Nothing  
+$$  
+\operatorname{Cov}(X + a,\ Y + b) = \operatorname{Cov}(X, Y)
+$$
+  
+The shift $a$ moves both $X$ and its mean $E[X]$ by the same amount, so the deviation is unchanged. The constant vanishes from the deviation, so it has zero effect on covariance. 
+###### Scaling by Constants  
+  
+$$  
+\operatorname{Cov}(aX,\ bY) = ab\operatorname{Cov}(X, Y)
+$$  This can simply be proven as:
+$$  
+\begin{align} \operatorname{Cov}(aX, bY) &= E\big[(aX - aE[X])(bY - bE[Y])\big] \\ &= E\big[ab(X-E[X])(Y-E[Y])\big] \\
+&=ab\operatorname{Cov}(X,Y) \end{align}
+$$
+Unlike variance (which gives $a^2$), covariance gives $ab$.  Scaling can flip the **sign** if $a$ or $b$ is negative.  
+###### Linear Transformation
+$$  
+\operatorname{Cov}(aX + b,\ cY + d)
+=
+ac\operatorname{Cov}(X, Y)
+$$
+This combines shift in-variance and scaling.
+Special case:  
+$$  
+\operatorname{Cov}(aX + b,\ Y)
+=
+a\operatorname{Cov}(X, Y)
+$$
+###### Bi-linearity of Covariance
+
+Covariance is **linear in each of its two arguments separately**. 
+$$
+\boxed{\operatorname{Cov}(aX + bY,\ Z)
+=a\operatorname{Cov}(X, Z)+b\operatorname{Cov}(Y, Z)}
+$$
+This can be proven as,
+$$
+\begin{aligned}
+\operatorname{Cov}(aX + bY,\ Z)
+&=
+E\Big[
+\big\{(aX+bY) - E[aX+bY]\big\}\big\{Z - E[Z]\big\}
+\Big]
+\end{aligned}
+$$
+
+Since $E[aX + bY] = aE[X] + bE[Y]$, I can simplify,
+$$
+\begin{aligned}
+\operatorname{Cov}(aX + bY,\ Z)
+&= E\Big[\big\{(aX+bY) - E[aX+bY]\big\}\big\{Z - E[Z]\big\}\Big] \\
+&= E\Big[\big\{aX+bY - aE[X] -bE[Y]\big\}\big\{Z - E[Z]\big\}\Big] \\
+&= E\Big[\big\{a(X - E[X]) + b(Y - E[Y])\big\}\big\{Z - E[Z]\big\}\Big]\\
+&= E\Big[a(X-E[X])(Z-E[Z])+b(Y-E[Y])(Z-E[Z])\Big] \\
+&= a\underbrace{E\big[(X-E[X])(Z-E[Z])\big]}_{\operatorname{Cov}(X,Z)}+b\underbrace{E\big[(Y-E[Y])(Z-E[Z])\big]}_{\operatorname{Cov}(Y,Z)} \\ \\
+\operatorname{Cov}(aX + bY,\ Z) &=a\operatorname{Cov}(X, Z)+b\operatorname{Cov}(Y, Z)
+\end{aligned}
+$$
+Similarly, I can prove,
+$$
+\boxed{\operatorname{Cov}(Z,\ aX + bY)
+=
+a\operatorname{Cov}(Z, X)
++
+b\operatorname{Cov}(Z, Y)}
+$$
+**Covariance can be treated like multiplication distributed over a sum**.
+$$
+\begin{align} \operatorname{Cov}(X+Y,\ X+Y)
+&= \operatorname{Cov}(X,\ X+Y) + \operatorname{Cov}(Y,\ X+Y)
+\\ &= \operatorname{Cov}(X,X)+\operatorname{Cov}(X,Y) + \operatorname{Cov}(Y,X)+\operatorname{Cov}(Y,Y) \end{align}
+$$
+
+###### Variance of a Sum and Difference
+$$
+\boxed{
+\begin{align} \operatorname{Var}(X + Y)
+&=\operatorname{Var}(X)+\operatorname{Var}(Y)+2\operatorname{Cov}(X, Y)
+\\ \\\operatorname{Var}(X - Y) &=\operatorname{Var}(X)+ \operatorname{Var}(Y)-2\operatorname{Cov}(X, Y)\end{align}}
+$$
+This can be proven using the property $\operatorname{Cov}(X, X) = \operatorname{Var}(X)$ as,
+$$  
+\begin{aligned}
+\operatorname{Var}(X+Y)
+&= \operatorname{Cov}\big((X+Y),\ (X+Y)\big) \\
+&= \operatorname{Cov}(X,X)
++ \operatorname{Cov}(X,Y)
++ \operatorname{Cov}(Y,X)
++ \operatorname{Cov}(Y,Y) \\
+&= \operatorname{Var}(X)
++ \operatorname{Var}(Y)
++ 2\operatorname{Cov}(X,Y)
+\end{aligned}
+$$
+In general for $n$ random variables, 
+$$\boxed{\operatorname{Var}\left(\sum_{i=1}^{n}X_i\right)= \sum_{i=1}^{n}\sum_{j=1}^{n}\operatorname{Cov}(X_i, X_j)}$$
+Also, in general,
+$$\boxed{  
+\operatorname{Var}(aX + bY)
+=
+a^2\operatorname{Var}(X)
++
+b^2\operatorname{Var}(Y)
++
+2ab\operatorname{Cov}(X, Y)}
+$$This combines the scaling rule applied to each variable and the sum rule, the cross term $2ab \operatorname{Cov}(X,Y)$ accounts for the interaction between the two variables.
+
+###### Independent Variables
+
+If $X$ and $Y$ are **independent**, then,
+$$  
+\begin{align} \operatorname{Cov}(X,Y) &= 0 \\ \\
+\operatorname{Var}(X + Y) &=\operatorname{Var}(X)+\operatorname{Var}(Y) \\ \\ \operatorname{Var}(aX + bY) &=a^2\operatorname{Var}(X)+b^2\operatorname{Var}(Y) \end{align}
+$$
+
+## Summary
+
+| Property                     | Formula                                                                                                        |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Non-negativity               | $\operatorname{Var}(X) \geq 0$                                                                                 |
+| Constant                     | $\operatorname{Var}(c) = 0$                                                                                    |
+| Shift by constant            | $\operatorname{Var}(X+c) = \operatorname{Var}(X)$                                                              |
+| Scale by constant            | $\operatorname{Var}(aX) = a^2 \operatorname{Var}(X)$                                                           |
+| Linear transform             | $\operatorname{Var}(aX+b) = a^2 \operatorname{Var}(X)$                                                         |
+| Computational formula        | $\operatorname{Var}(X) = E[X^2] - (E[X])^2$                                                                    |
+| Sum of two variables         | $\operatorname{Var}(X+Y) = \operatorname{Var}(X) + \operatorname{Var}(Y) + 2\operatorname{Cov}(X,Y)$           |
+| Difference                   | $\operatorname{Var}(X-Y) = \operatorname{Var}(X) + \operatorname{Var}(Y) - 2\operatorname{Cov}(X,Y)$           |
+| Linear combination           | $\operatorname{Var}(aX+bY) = a^2\operatorname{Var}(X) + b^2\operatorname{Var}(Y) + 2ab\operatorname{Cov}(X,Y)$ |
+| General sum of $n$ variables | $\operatorname{Var}\!\left(\sum_i X_i\right) = \sum_i \sum_j \operatorname{Cov}(X_i, X_j)$                     |
+| Independent variables        | $\operatorname{Var}(X+Y) = \operatorname{Var}(X) + \operatorname{Var}(Y)$                                      |
+
+| Property         | Formula                                                                              |
+| ---------------- | ------------------------------------------------------------------------------------ |
+| Constant         | $\operatorname{Cov}(X, c) = 0$                                                       |
+| Shift            | $\operatorname{Cov}(X+a,\ Y+b) = \operatorname{Cov}(X,Y)$                            |
+| Scale            | $\operatorname{Cov}(aX,\ bY) = ab\operatorname{Cov}(X,Y)$                            |
+| Linear transform | $\operatorname{Cov}(aX+b,\ cY+d) = ac\operatorname{Cov}(X,Y)$                        |
+| Symmetry         | $\operatorname{Cov}(X,Y) = \operatorname{Cov}(Y,X)$                                  |
+| Self-covariance  | $\operatorname{Cov}(X,X) = \operatorname{Var}(X)$                                    |
+| Bilinearity      | $\operatorname{Cov}(aX+bY, Z) = a\operatorname{Cov}(X,Z) + b\operatorname{Cov}(Y,Z)$ |
+| Independence     | $X \perp Y \Rightarrow \operatorname{Cov}(X,Y) = 0$                                  |

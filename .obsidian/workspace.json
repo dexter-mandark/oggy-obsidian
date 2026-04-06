@@ -8,131 +8,16 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f015595db8594eb3",
+            "id": "9ab475a33213f5e1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Markov's Inequality.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Markov's Inequality"
-            }
-          },
-          {
-            "id": "cdab329fd7e7c930",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Guha ML Roadmap.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Guha ML Roadmap"
-            }
-          },
-          {
-            "id": "60b28edf7ad084c9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Basics/Z score & Mahalanobis Distance.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Z score & Mahalanobis Distance"
-            }
-          },
-          {
-            "id": "1b224523340a898d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00-Dump/00XX - Todo.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "00XX - Todo"
-            }
-          },
-          {
-            "id": "2e5a30b500e51a38",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Basics/Measures of Variability.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Measures of Variability"
-            }
-          },
-          {
-            "id": "6e421d9109e44406",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00-Dump/00XX - Todo.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "00XX - Todo"
-            }
-          },
-          {
-            "id": "0adceffe0df83653",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Basics/Measures of Variability.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Measures of Variability"
-            }
-          },
-          {
-            "id": "63db11cb28dad143",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "PDF-Dump/L01_LinearRegression.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "L01_LinearRegression"
-            }
-          },
-          {
-            "id": "cbdb504e6bd4fc6f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linear Regression.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Linear Regression"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 8
+        ]
       }
     ],
     "direction": "vertical"
@@ -339,53 +224,54 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "cbdb504e6bd4fc6f",
+  "active": "9ab475a33213f5e1",
   "lastOpenFiles": [
-    "00-Dump/Logistic Regression.md",
-    "Basics/Kernel Functions and Profile.md",
-    "Pasted image 20260302064812.png",
-    "Perceptron.md",
+    "Basics/Markov's Inequality.md",
+    "Object Tracking.md",
+    "Mean Shift Clustering.md",
+    "Maximum Likelihood Estimation (MLE).md",
+    "Linear Regression.md",
+    "Gradient Ascent.md",
+    "Estimation Theory.md",
+    "Classification.md",
+    "Maths/Constraint Optimization.md",
+    "Gaussian Mixture Models.md",
+    "00-Dump/00XX - Todo.md",
+    "Guha ML Roadmap.md",
+    "Untitled 1.md",
+    "Untitled 2.md",
+    "Untitled.md",
+    "Untitled 3.md",
+    "Principal Component Analysis.md",
+    "Untitled.svg",
+    "00-Images/pca-projection-p-matters.png",
     "Excalidraw/Drawing 2026-02-18 02.28.00.excalidraw.md",
+    "Maths/Gradient.md",
+    "00-Dump/00XX - Partial Derivatives.md",
+    "00-Images/z=xy+1_contour.png",
+    "Basics/Kernel Density Estimation.md",
+    "Maths/Probability.md",
+    "00-Images/z=xy+1_2.png",
+    "00-Images/z=xy+1_1.png",
+    "Maths/Measure Theory.md",
+    "Maths/Definitions.md",
+    "00-Dump/Logistic Regression.md",
+    "00-Dump/Linear Algebra.md",
+    "00-Dump/00XX - latex_symbols.pdf",
+    "PDF-Dump/L01_LinearRegression.pdf",
+    "Pasted image 20260223033428.png",
+    "Pasted image 20260302064812.png",
     "Excalidraw",
     "PDF-Dump/DiscriminantFunction (3).pdf",
     "PDF-Dump/Chebyshev_Bayes_Classifier_PerformanceAnalysis (1).pdf",
-    "Markov's Inequality.md",
     "PDF-Dump/Perceptron (2).pdf",
     "PDF-Dump/ParametricEstimation.pdf",
     "PDF-Dump/OutlierRejection (2).pdf",
     "PDF-Dump/LogisticRegression.pdf",
     "PDF-Dump/LDA_LinearDiscriminantAnalysis.pdf",
-    "PDF-Dump/L01_LinearRegression.pdf",
-    "PDF-Dump/Estimation Theory Problems.pdf",
-    "Linear Regression.md",
-    "Basics/Z score & Mahalanobis Distance.md",
-    "Maximum Likelihood Estimation (MLE).md",
-    "Estimation Theory.md",
-    "Basics/Measures of Variability.md",
-    "Basics/Covariance Matrix.md",
-    "Pasted image 20260223033428.png",
-    "Gradient Ascent.md",
-    "Maths/Norm.md",
-    "Gaussian Mixture Models.md",
-    "Basics/Measures of Central Tendency.md",
-    "Guha ML Roadmap.md",
-    "Mean Shift Clustering.md",
-    "Object Tracking.md",
-    "Classification.md",
-    "00-Dump/Linear Algebra.md",
-    "00-Dump/00XX - Todo.md",
-    "Maximum Likel.md",
-    "00-Dump/00XX - Basic Definition in Statistics.md",
-    "00-Dump/00XX - Partial Derivatives.md",
-    "00-Dump/00XX - Likelihood Function.md",
     "Pasted image 20260119185823.png",
     "Pasted image 20260119185838.png",
     "Pasted image 20260205203124.png",
-    "Pasted image 20260108161826.png",
-    "Pasted image 20251023001012.png",
-    "Pasted image 20251115211943.png",
-    "00-Images/logistic-function-curve.png",
-    "00-Images/kernel-density-estimation.png",
     "Untitled.canvas"
   ]
 }
