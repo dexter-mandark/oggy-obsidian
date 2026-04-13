@@ -170,3 +170,4 @@ The theorem proves convergence but **says nothing about which hyperplane you fi
 - The **order** in which training points are visited
 - The **initial weight** $\mathbf{w}^{(0)}$
 - The **learning rate** $\eta$
+

@@ -6,18 +6,142 @@
       {
         "id": "def39e007393e762",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
             "id": "9ab475a33213f5e1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Perceptron.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Perceptron"
+            }
+          },
+          {
+            "id": "4a41da58a8a6b48e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Principal Component Analysis.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Principal Component Analysis"
+            }
+          },
+          {
+            "id": "fbdb471f6cb88632",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "LLMs/Statistical Language Models.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Statistical Language Models"
+            }
+          },
+          {
+            "id": "bc50514328f06047",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Word Representation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Word Representation"
+            }
+          },
+          {
+            "id": "b490bf7f97a3363e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Estimation Theory.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Estimation Theory"
+            }
+          },
+          {
+            "id": "14f85e276df4871b",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "00-Dump/00XX - latex_symbols.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "00XX - latex_symbols"
             }
           }
-        ]
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "7573c880455423f4",
+        "type": "tabs",
+        "dimension": 50,
+        "children": [
+          {
+            "id": "b5bd10e097a7a9b9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 2"
+            }
+          },
+          {
+            "id": "ab677dc1e1f5156d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
+            }
+          },
+          {
+            "id": "dbff236e6ea3bbe6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 3.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 3"
+            }
+          }
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -36,7 +160,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "L1",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -224,40 +348,43 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "9ab475a33213f5e1",
+  "active": "fbdb471f6cb88632",
   "lastOpenFiles": [
+    "Word Representation.md",
+    "Untitled 3.md",
+    "Untitled 2.md",
     "Untitled.md",
+    "00-Images/cbow-skipgram-architecture.png",
+    "LLMs/Statistical Language Models.md",
+    "Principal Component Analysis.md",
+    "Untitled 1.md",
+    "Perceptron.md",
+    "00-Images/llm-bigram-count-table.png",
+    "Estimation Theory.md",
+    "00-Dump/00XX - latex_symbols.pdf",
+    "Maths/Norm.md",
+    "Basics/Measures of Variability.md",
+    "Maximum Likelihood Estimation (MLE).md",
+    "Classification.md",
+    "Mean Shift Clustering.md",
+    "Gradient Ascent.md",
+    "Basics/Kernel Density Estimation.md",
+    "Maths/Pre-Image.md",
+    "Maths/Measure Theory.md",
+    "LLMs",
     "Basics/Markov's Inequality.md",
     "Object Tracking.md",
-    "Mean Shift Clustering.md",
-    "Maximum Likelihood Estimation (MLE).md",
     "Linear Regression.md",
-    "Gradient Ascent.md",
-    "Estimation Theory.md",
-    "Classification.md",
     "Maths/Constraint Optimization.md",
     "Gaussian Mixture Models.md",
     "00-Dump/00XX - Todo.md",
     "Guha ML Roadmap.md",
-    "Untitled 1.md",
-    "Untitled 2.md",
-    "Untitled 3.md",
-    "Principal Component Analysis.md",
     "Untitled.svg",
     "00-Images/pca-projection-p-matters.png",
     "Excalidraw/Drawing 2026-02-18 02.28.00.excalidraw.md",
-    "Maths/Gradient.md",
-    "00-Dump/00XX - Partial Derivatives.md",
     "00-Images/z=xy+1_contour.png",
-    "Basics/Kernel Density Estimation.md",
-    "Maths/Probability.md",
     "00-Images/z=xy+1_2.png",
     "00-Images/z=xy+1_1.png",
-    "Maths/Measure Theory.md",
-    "Maths/Definitions.md",
-    "00-Dump/Logistic Regression.md",
-    "00-Dump/Linear Algebra.md",
-    "00-Dump/00XX - latex_symbols.pdf",
     "PDF-Dump/L01_LinearRegression.pdf",
     "Pasted image 20260223033428.png",
     "Pasted image 20260302064812.png",
@@ -268,10 +395,7 @@
     "PDF-Dump/ParametricEstimation.pdf",
     "PDF-Dump/OutlierRejection (2).pdf",
     "PDF-Dump/LogisticRegression.pdf",
-    "PDF-Dump/LDA_LinearDiscriminantAnalysis.pdf",
     "Pasted image 20260119185823.png",
-    "Pasted image 20260119185838.png",
-    "Pasted image 20260205203124.png",
     "Untitled.canvas"
   ]
 }

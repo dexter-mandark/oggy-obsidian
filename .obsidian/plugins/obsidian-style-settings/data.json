@@ -16,5 +16,6 @@
   "Appearance-dark@@color-to-tab-icon-dark": true,
   "Appearance-dark@@card-highlight-dark": true,
   "Editor@@bold-color@@dark": "#6CB2DD",
-  "Plugin@@colorful-checkbox": true
+  "Plugin@@colorful-checkbox": true,
+  "Editor@@text-align-justify": false
 }

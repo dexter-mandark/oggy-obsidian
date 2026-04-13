@@ -8,5 +8,12 @@
   "userIgnoreFilters": [
     "00-Templates/"
   ],
-  "propertiesInDocument": "visible"
+  "propertiesInDocument": "visible",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "2",
+    "downscalePercent": 10
+  }
 }
